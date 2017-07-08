@@ -1,0 +1,59 @@
+[comment encoding = UTF-8 /]
+[module generateModel('http://www.nemo.inf.ufes.br/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
+[import gore::unagi::converter::refinements /]
+
+[template public generateModel(aGoalModel : GoalModel)]
+[file ('model.'.concat(aGoalModel.modelName), false, 'UTF-8')]
+<?xml version="1.0" encoding="UTF-8"?>
+<[aGoalModel.modelName.toLower()/]:[aGoalModel.modelName.toLower().toUpperFirst()/]GoalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scheduler="https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/scheduler/scheduler.ecore" xmlns:it.unitn.disi.zanshin.model="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/eca.ecore">
+[if(aGoalModel.rootGoal->size() > 0)]
+	<rootGoal xsi:type="[aGoalModel.modelName/]:[aGoalModel.rootGoal.name/]" [aGoalModel.rootGoal.getAllParameters()/]>
+	[for(ref : GoalOrientedRequirement | aGoalModel.rootGoal.refinements)]
+		[aGoalModel.refinements(aGoalModel, ref)/]
+	[/for]
+	[for(awreqs : AwReq | aGoalModel.rootGoal.awreqs)]
+			[if(awreqs.strategies->size() > 0 or awreqs.resolution->size() > 0)]
+			<awreqs xsi:type="[aGoalModel.modelName/]:[awreqs.name/]" [awreqs.getAllParameters()/]>
+				[for(resolution : ResolutionCondition | awreqs.resolution)]
+				<condition xsi:type="it.unitn.disi.zanshin.model:[resolution.name/]" [resolution.getAllParameters()/]/>
+				[/for]
+				[for(strategies : AdaptationStrategy | awreqs.strategies)]
+				[if(strategies.applicabilities->size() > 0)]
+				<strategies xsi:type="it.unitn.disi.zanshin.model:[strategies.name/]" [strategies.getAllParameters()/]>
+					[for(applicabilities : ApplicabilityCondition | strategies.applicabilities)]
+					<condition xsi:type="it.unitn.disi.zanshin.model:[applicabilities.name/]"/>
+					[/for]
+				</strategies>
+				[else]
+					<strategies xsi:type="it.unitn.disi.zanshin.model:[strategies.name/]" [strategies.getAllParameters()/]/>
+				[/if]
+				[/for]
+			</awreqs>
+			[else]
+			<awreqs xsi:type="[aGoalModel.modelName/]:[awreqs.name/]" [awreqs.getAllParameters()/]/>
+			[/if]
+		[/for]
+		[for(assumptions : DomainAssumption | aGoalModel.rootGoal.assumptions)]
+			<assumptions xsi:type="[aGoalModel.modelName/]:[assumptions.name/]"/>
+	[/for]
+	</rootGoal>
+	[if(aGoalModel.configuration <> null)]
+	[for(conf : Configuration | aGoalModel.configuration)]
+	<configuration>
+		[for(param : Parameter | conf.parameters)]
+		<parameters xsi:type="[aGoalModel.modelName/]:[param.name/]" [param.getAllParameters()/]/>
+		[/for]
+	</configuration>
+	[/for]
+	[/if]
+	[for(relation : DifferentialRelation | aGoalModel.relations)]
+	<relations />
+	[/for]
+[else]
+	ERROR: Rootgoal is not defined.
+[/if]
+
+<[aGoalModel.modelName.toLower()/]:[aGoalModel.modelName.toLower().toUpperFirst()/]/>
+
+[/file]
+[/template]

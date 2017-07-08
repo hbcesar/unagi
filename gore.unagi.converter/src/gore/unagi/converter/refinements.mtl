@@ -1,0 +1,54 @@
+[comment encoding = UTF-8 /]
+[module refinements('http://www.nemo.inf.ufes.br/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
+
+[template public refinements(aGoalModel : GoalModel, aGOREElement : GoalOrientedRequirement)]
+	[if( aGOREElement.refinements->size() > 0 or aGOREElement.awreqs->size() > 0 or aGOREElement.assumptions->size() > 0)]
+	<refinements xsi:type="[aGoalModel.modelName/]:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]">
+		[for(awreqs : AwReq | aGOREElement.awreqs)]
+			[if(awreqs.strategies->size() > 0 or awreqs.resolution->size() > 0)]
+			<awreqs xsi:type="[aGoalModel.modelName/]:[awreqs.getShortName()/]" [awreqs.getAllParameters()/]>
+				[for(resolution : ResolutionCondition | awreqs.resolution)]
+				<condition xsi:type="it.unitn.disi.zanshin.model:[resolution.name/]" [resolution.getAllParameters()/]/>
+				[/for]
+				[for(strategies : AdaptationStrategy | awreqs.strategies)]
+				[if(strategies.applicabilities->size() > 0)]
+				<strategies xsi:type="it.unitn.disi.zanshin.model:[strategies.name/]" [strategies.getAllParameters()/]>
+					[for(applicabilities : ApplicabilityCondition | strategies.applicabilities)]
+					<condition xsi:type="it.unitn.disi.zanshin.model:[applicabilities.name/]" [applicabilities.getAllParameters()/]/>
+					[/for]
+				</strategies>
+				[else]
+					<strategies xsi:type="it.unitn.disi.zanshin.model:[strategies.name/]" [strategies.getAllParameters()/]/>
+				[/if]
+				[/for]
+			</awreqs>
+			[else]
+			<awreqs xsi:type="[aGoalModel.modelName/]:[awreqs.getShortName()/]" [awreqs.getAllParameters()/]/>
+			[/if]
+		[/for]
+		[for(assumptions : DomainAssumption | aGOREElement.assumptions)]
+			<assumptions xsi:type="[aGoalModel.modelName/]:[assumptions.getShortName()/]"/>
+		[/for]
+		[if(aGOREElement.oclIsKindOf(Softgoal))]
+			[for(constraints : QualityConstraint | aGOREElement.oclAsType(Softgoal).constraints)]
+			<constraints xsi:type="[aGoalModel.modelName/]:[constraints.getShortName()/]"/>
+			[/for]
+		[/if]
+		[for(c : GoalOrientedRequirement | aGOREElement.refinements)]
+			[aGoalModel.refinements(aGoalModel, c)/]
+		[/for]
+	</refinements>
+	[elseif(aGOREElement.oclIsKindOf(Softgoal))]
+	[if(aGOREElement.oclAsType(Softgoal).constraints->size() > 0)]
+	<refinements xsi:type="[aGoalModel.modelName/]:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]>
+			[for(constraints : QualityConstraint | aGOREElement.oclAsType(Softgoal).constraints)]
+			<constraints xsi:type="[aGoalModel.modelName/]:[constraints.getShortName()/]"/>
+			[/for]
+	</refinements>
+	[else]
+	<refinements xsi:type="[aGoalModel.modelName/]:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]/>
+	[/if]
+	[else]
+	<refinements xsi:type="[aGoalModel.modelName/]:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]/>
+	[/if]
+[/template]

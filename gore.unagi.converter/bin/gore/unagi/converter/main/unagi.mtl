@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module unagi('http://www.nemo.inf.ufes.br/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
+[import gore::unagi::converter::generateMetaModel /]
+[import gore::unagi::converter::generateModel /]
+
+[template public unagi(aGoalModel : GoalModel)]
+[comment @main/]
+[aGoalModel.generateMetaModel()/]
+[aGoalModel.generateModel()/]
+[/template]
