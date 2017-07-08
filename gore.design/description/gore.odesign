@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="gore" version="11.1.1.201610211630">
+  <ownedViewpoints name="Gore Diagram">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Gore" initialisation="true" domainClass="gore.GoalModel" enablePopupBars="true">
+      <metamodel href="http://www.nemo.inf.ufes.br/gore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="HardGoal" domainClass="gore.Hardgoal">
+          <style xsi:type="style:EllipseNodeDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="SoftGoal" domainClass="gore.Softgoal">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/softgoal-icon.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Task" domainClass="gore.Task">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/task-icon.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="AwReq" doubleClickDescription="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@toolSections.0/@ownedTools[name='new%20AwReq%20Diagram']" domainClass="gore.AwReq">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" resizeKind="NSEW" workspacePath="gore.design/icons/adaptation-strategy-icon.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="QualityConstraint" domainClass="gore.QualityConstraint">
+          <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DomainAssumption" domainClass="gore.DomainAssumption">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/domain-assumption-icon.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Actor" domainClass="gore.Actor">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/actor.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Configuration" doubleClickDescription="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@toolSections.0/@ownedTools[name='new%20Configuration%20Diagram']" domainClass="gore.Configuration">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" resizeKind="NSEW" workspacePath="gore.design/icons/configuration.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Hardgoal Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']" targetFinderExpression="feature:refinements">
+          <conditionnalStyles predicateExpression="[thisEObject.refinementType.toString().equalsIgnoreCase('and')/]">
+            <style>
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[thisEObject.refinementType.toString().equalsIgnoreCase('or')/]">
+            <style lineStyle="dash" sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="Softgoal Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint']" targetFinderExpression="feature:constraints">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Task Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetFinderExpression="feature:refinements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="AwReq Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetFinderExpression="feature:target">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="DomainAssumption Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetFinderExpression="feature:parent">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Node Creation">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new HardGoal" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.Hardgoal" referenceName="refinements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Softgoal" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.Softgoal" referenceName="refinements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Task" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.Task" referenceName="refinements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new AwReq" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.AwReq" referenceName="refinements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new QualityConstraint" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.QualityConstraint" referenceName="refinements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new DomainAssumption" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.DomainAssumption" referenceName="domainassumption"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Actor" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Actor']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.Actor" referenceName="actors"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Configuration" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Configuration']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.Configuration" referenceName="configuration"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="new AwReq Diagram" mappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="new Configuration Diagram" mappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Configuration']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Configuration%20Diagram']"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Edge Creation">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Refinement Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='Hardgoal%20Edge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="refinements" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Softgoal Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='Softgoal%20Edge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="constraints" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Task Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='Task%20Edge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="refinements" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new AwReq Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='AwReq%20Edge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new DomainAssumption Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='DomainAssumption%20Edge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="AwReq Diagram" domainClass="gore.AwReq">
+      <metamodel href="http://www.nemo.inf.ufes.br/gore/eca#/"/>
+      <metamodel href="http://www.nemo.inf.ufes.br/gore#/"/>
+      <defaultLayer name="Default">
+        <containerMappings name="AwReq Container" semanticCandidatesExpression="var:self" domainClass="gore.AwReq" childrenPresentation="VerticalStack">
+          <subContainerMappings name="Strategy Container" domainClass="eca.AdaptationStrategy" childrenPresentation="VerticalStack">
+            <subContainerMappings name="ApplicabilityCondition Container" domainClass="eca.ApplicabilityCondition" childrenPresentation="VerticalStack">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" widthComputationExpression="20" backgroundStyle="Liquid">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" widthComputationExpression="20" backgroundStyle="Liquid">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="ResolutionCondition Container" semanticCandidatesExpression="feature:eAllContents" domainClass="eca.ResolutionCondition" childrenPresentation="VerticalStack">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" widthComputationExpression="20" backgroundStyle="Liquid">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" widthComputationExpression="20" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Strategy Container Creation">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new AbortStrategy" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.AbortStrategy" referenceName="strategies">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="AbortStrategy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new WarningStrategy" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.WarningStrategy" referenceName="strategies">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="WarningStrategy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new RelaxDisableChildStrategy" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.RelaxDisableChildStrategy" referenceName="strategies">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="RelaxDisableChildStrategy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new RelaxReplaceChildStrategy" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.RelaxReplaceChildStrategy" referenceName="strategies">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="RelaxReplaceChildStrategy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new RetryStrategy" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.RetryStrategy" referenceName="strategies">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="RetryStrategy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new StrengthenEnableChildStrategy" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.StrengthenEnableChildStrategy" referenceName="strategies">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="StrengthenEnableChildStrategy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new StrengthenReplaceChildStrategy" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.StrengthenReplaceChildStrategy" referenceName="strategies">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="StrengthenReplaceChildStrategy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new ReconfigurationStrategy" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.ReconfigurationStrategy" referenceName="strategies">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="ReconfigurationStrategy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Applicability Container Creation">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new SimpleApplicabilityCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']/@subContainerMappings[name='ApplicabilityCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.SimpleApplicabilityCondition" referenceName="applicabilities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="SimpleApplicabilityCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new MaxExecutionsPerSectionApplicabilityCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']/@subContainerMappings[name='ApplicabilityCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.MaxExecutionsPerSectionApplicabilityCondition" referenceName="applicabilities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="MaxExecutionsPerSectionApplicabilityCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new AndRefinedApplicabilityCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']/@subContainerMappings[name='ApplicabilityCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.AndRefinedApplicabilityCondition" referenceName="applicabilities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="AndRefinedApplicabilityCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new OrRefinedApplicabilityCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']/@subContainerMappings[name='ApplicabilityCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.OrRefinedApplicabilityCondition" referenceName="applicabilities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="OrRefinedApplicabilityCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new ReconfigurationApplicabilityCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='Strategy%20Container']/@subContainerMappings[name='ApplicabilityCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.ReconfigurationApplicabilityCondition" referenceName="applicabilities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="ReconfigurationApplicabilityCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Resolution Condition Container Creation">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new SimpleResolutionCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='ResolutionCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.SimpleResolutionCondition" referenceName="resolution">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="SimpleResolutionCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new AndRefinedResolutionCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='ResolutionCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.AndRefinedResolutionCondition" referenceName="resolution">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="AndRefinedResolutionCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new OrRefinedResolutionCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='ResolutionCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.OrRefinedResolutionCondition" referenceName="resolution">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="OrRefinedResolutionCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new SimpleResolutionCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='ResolutionCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.SimpleResolutionCondition" referenceName="resolution">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="SimpleResolutionCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new ReconfigurationResolutionCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='ResolutionCondition%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.ReconfigurationResolutionCondition" referenceName="resolution">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="ReconfigurationResolutionCondition"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Configuration Diagram" domainClass="gore.Configuration">
+      <metamodel href="http://www.nemo.inf.ufes.br/gore#/"/>
+      <defaultLayer name="Default">
+        <containerMappings name="Configuration Container" semanticCandidatesExpression="var:self" domainClass="gore.Configuration" childrenPresentation="VerticalStack">
+          <subContainerMappings name="Parameter Container" semanticCandidatesExpression="feature:eAllContents" domainClass="gore.Parameter">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" widthComputationExpression="20">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" widthComputationExpression="20" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Strategy Container Creation">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new Parameter" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Configuration%20Diagram']/@defaultLayer/@containerMappings[name='Configuration%20Container']/@subContainerMappings[name='Parameter%20Container']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.Parameter" referenceName="parameters"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="gore.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
