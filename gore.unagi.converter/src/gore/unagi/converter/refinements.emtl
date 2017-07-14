@@ -1,0 +1,1999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="refinements" nsURI="gore::unagi::converter::refinements" startHeaderPosition="29" endHeaderPosition="386">
+    <input>
+      <takesTypesFrom href="http://www.nemo.inf.ufes.br/gore#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://www.nemo.inf.ufes.br/gore/eca#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="refinements" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;refinements xsi:type=&quot;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+            <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+            <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/getShortName"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+            <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/getAllParameters"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;>&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;awreqs xsi:type=&quot;"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/refinements/%/%.7/awreqs">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//AwReq/getShortName"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/refinements/%/%.7/awreqs">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//AwReq/getAllParameters"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;condition xsi:type=&quot;it.unitn.disi.zanshin.model:"/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="resolution" referredVariable="/0/refinements/%/%.7/%/%.7/resolution">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition/name"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+              <body xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="resolution" referredVariable="/0/refinements/%/%.7/%/%.7/resolution">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition/getAllParameters"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+              <loopVariable name="resolution">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+              </loopVariable>
+              <iterSet xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/refinements/%/%.7/awreqs">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//AwReq/resolution"/>
+              </iterSet>
+            </body>
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;strategies xsi:type=&quot;it.unitn.disi.zanshin.model:"/>
+                <body xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/refinements/%/%.7/%/%.8/strategies">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/name"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+                <body xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/refinements/%/%.7/%/%.8/strategies">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/getAllParameters"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
+                <body xsi:type="mtl:ForBlock">
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&lt;condition xsi:type=&quot;it.unitn.disi.zanshin.model:"/>
+                  <body xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="applicabilities" referredVariable="/0/refinements/%/%.7/%/%.8/%/%.5/applicabilities">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition/name"/>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+                  <body xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="applicabilities" referredVariable="/0/refinements/%/%.7/%/%.8/%/%.5/applicabilities">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+                    </source>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition/getAllParameters"/>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+                  <loopVariable name="applicabilities">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+                  </loopVariable>
+                  <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(ApplicabilityCondition)">
+                    <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/refinements/%/%.7/%/%.8/strategies">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/applicabilities"/>
+                  </iterSet>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;/strategies>&#xA;"/>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                    <source xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(ApplicabilityCondition)">
+                      <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/refinements/%/%.7/%/%.8/strategies">
+                        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                      </source>
+                      <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/applicabilities"/>
+                    </source>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+                </ifExpr>
+                <else>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&lt;strategies xsi:type=&quot;it.unitn.disi.zanshin.model:"/>
+                  <body xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/refinements/%/%.7/%/%.8/strategies">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/name"/>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+                  <body xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/refinements/%/%.7/%/%.8/strategies">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                    </source>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/getAllParameters"/>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+                </else>
+              </body>
+              <loopVariable name="strategies">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+              </loopVariable>
+              <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(AdaptationStrategy)">
+                <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/refinements/%/%.7/awreqs">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//AwReq/strategies"/>
+              </iterSet>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;/awreqs>&#xA;"/>
+            <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(AdaptationStrategy)">
+                    <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/refinements/%/%.7/awreqs">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//AwReq/strategies"/>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+                </source>
+                <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+              </source>
+              <argument xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  <source xsi:type="ocl.ecore:CollectionLiteralExp" eType="/6/Set(ResolutionCondition)">
+                    <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL/Annotations">
+                      <details key="IMPLICIT_SET_CONVERSION" value="true"/>
+                    </eAnnotations>
+                    <part xsi:type="ocl.ecore:CollectionItem">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                      <item xsi:type="ocl.ecore:PropertyCallExp">
+                        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                        <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/refinements/%/%.7/awreqs">
+                          <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                        </source>
+                        <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//AwReq/resolution"/>
+                      </item>
+                    </part>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Set(T)_Class/size"/>
+                </source>
+                <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/or"/>
+            </ifExpr>
+            <else>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;awreqs xsi:type=&quot;"/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+              <body xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/refinements/%/%.7/awreqs">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//AwReq/getShortName"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+              <body xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/refinements/%/%.7/awreqs">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//AwReq/getAllParameters"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+            </else>
+          </body>
+          <loopVariable name="awreqs">
+            <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(AwReq)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/awreqs"/>
+          </iterSet>
+        </body>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;assumptions xsi:type=&quot;"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="assumptions" referredVariable="/0/refinements/%/%.8/assumptions">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption/getShortName"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;/>&#xA;"/>
+          <loopVariable name="assumptions">
+            <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(DomainAssumption)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement/assumptions"/>
+          </iterSet>
+        </body>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;constraints xsi:type=&quot;"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="constraints" referredVariable="/0/refinements/%/%.9/%/constraints">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint/getShortName"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;/>&#xA;"/>
+            <loopVariable name="constraints">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(QualityConstraint)">
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Softgoal"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+                </source>
+                <argument xsi:type="ocl.ecore:TypeExp" eType="/49/Softgoal">
+                  <referredType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Softgoal"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//Softgoal/constraints"/>
+            </iterSet>
+          </body>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/49/Softgoal">
+              <referredType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Softgoal"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
+          </ifExpr>
+        </body>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/refinements">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/refinements/%/%.10/c">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <loopVariable name="c">
+            <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(GoalOrientedRequirement)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement/refinements"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;/refinements>&#xA;"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                <source xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(GoalOrientedRequirement)">
+                  <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement/refinements"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+              </source>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+            </source>
+            <argument xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                <source xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(AwReq)">
+                  <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/awreqs"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+              </source>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/or"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(DomainAssumption)">
+                <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement/assumptions"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+            </source>
+            <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/or"/>
+        </ifExpr>
+        <else>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;refinements xsi:type=&quot;"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/getShortName"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/getAllParameters"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+        </else>
+        <elseIf>
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;refinements xsi:type=&quot;"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/getShortName"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/getAllParameters"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;constraints xsi:type=&quot;"/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+              <body xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="constraints" referredVariable="/0/refinements/%/%.14/%/%.7/constraints">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint/getShortName"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;/>&#xA;"/>
+              <loopVariable name="constraints">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+              </loopVariable>
+              <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(QualityConstraint)">
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Softgoal"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:TypeExp" eType="/49/Softgoal">
+                    <referredType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Softgoal"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//Softgoal/constraints"/>
+              </iterSet>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;/refinements>&#xA;"/>
+            <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                <source xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(QualityConstraint)">
+                  <source xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Softgoal"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+                    </source>
+                    <argument xsi:type="ocl.ecore:TypeExp" eType="/49/Softgoal">
+                      <referredType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Softgoal"/>
+                    </argument>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//Softgoal/constraints"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+              </source>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+            </ifExpr>
+            <else>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;refinements xsi:type=&quot;"/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/refinements/aGoalModel">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+              <body xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/getShortName"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+              <body xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/getAllParameters"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+            </else>
+          </body>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGOREElement" referredVariable="/0/refinements/aGOREElement">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/49/Softgoal">
+              <referredType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Softgoal"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
+          </ifExpr>
+        </elseIf>
+      </body>
+      <parameter name="aGoalModel">
+        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+      </parameter>
+      <parameter name="aGOREElement">
+        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="refinements">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/refinements"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aGoalModel">
+          <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+        </eParameters>
+        <eParameters name="aGOREElement">
+          <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="gore_GoalModel_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(GoalOrientedRequirement)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(GoalOrientedRequirement)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(AwReq)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(AwReq)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(DomainAssumption)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(DomainAssumption)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(AdaptationStrategy)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(AdaptationStrategy)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ResolutionCondition)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ApplicabilityCondition)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ApplicabilityCondition)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(QualityConstraint)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Softgoal">
+      <referredType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Softgoal"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//QualityConstraint"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/refinements">
+      <details key="start" value="127"/>
+      <details key="end" value="2820"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/refinements/%">
+      <details key="start" value="222"/>
+      <details key="end" value="2808"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/refinements/%/%">
+      <details key="start" value="341"/>
+      <details key="end" value="365"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/refinements/%/%.1">
+      <details key="start" value="366"/>
+      <details key="end" value="386"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/refinements/%/%.1/aGoalModel">
+      <details key="start" value="366"/>
+      <details key="end" value="376"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/refinements/%/%.2">
+      <details key="start" value="388"/>
+      <details key="end" value="389"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/refinements/%/%.3">
+      <details key="start" value="390"/>
+      <details key="end" value="417"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/refinements/%/%.3/aGOREElement">
+      <details key="start" value="390"/>
+      <details key="end" value="402"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/refinements/%/%.4">
+      <details key="start" value="419"/>
+      <details key="end" value="421"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/refinements/%/%.5">
+      <details key="start" value="422"/>
+      <details key="end" value="453"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/refinements/%/%.5/aGOREElement">
+      <details key="start" value="422"/>
+      <details key="end" value="434"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/refinements/%/%.6">
+      <details key="start" value="455"/>
+      <details key="end" value="458"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/refinements/%/%.7">
+      <details key="start" value="460"/>
+      <details key="end" value="1595"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/refinements/%/%.7/%">
+      <details key="start" value="507"/>
+      <details key="end" value="1586"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/refinements/%/%.7/%/%">
+      <details key="start" value="576"/>
+      <details key="end" value="597"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/refinements/%/%.7/%/%.1">
+      <details key="start" value="598"/>
+      <details key="end" value="618"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/refinements/%/%.7/%/%.1/aGoalModel">
+      <details key="start" value="598"/>
+      <details key="end" value="608"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/refinements/%/%.7/%/%.2">
+      <details key="start" value="620"/>
+      <details key="end" value="621"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/refinements/%/%.7/%/%.3">
+      <details key="start" value="622"/>
+      <details key="end" value="643"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/refinements/%/%.7/%/%.3/awreqs">
+      <details key="start" value="622"/>
+      <details key="end" value="628"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/refinements/%/%.7/%/%.4">
+      <details key="start" value="645"/>
+      <details key="end" value="647"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/refinements/%/%.7/%/%.5">
+      <details key="start" value="648"/>
+      <details key="end" value="673"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/refinements/%/%.7/%/%.5/awreqs">
+      <details key="start" value="648"/>
+      <details key="end" value="654"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/refinements/%/%.7/%/%.6">
+      <details key="start" value="675"/>
+      <details key="end" value="677"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/refinements/%/%.7/%/%.7">
+      <details key="start" value="681"/>
+      <details key="end" value="859"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/refinements/%/%.7/%/%.7/%">
+      <details key="start" value="741"/>
+      <details key="end" value="794"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/refinements/%/%.7/%/%.7/%.1">
+      <details key="start" value="795"/>
+      <details key="end" value="810"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/refinements/%/%.7/%/%.7/%.1/resolution">
+      <details key="start" value="795"/>
+      <details key="end" value="805"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/refinements/%/%.7/%/%.7/%.2">
+      <details key="start" value="812"/>
+      <details key="end" value="814"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/refinements/%/%.7/%/%.7/%.3">
+      <details key="start" value="815"/>
+      <details key="end" value="844"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/refinements/%/%.7/%/%.7/%.3/resolution">
+      <details key="start" value="815"/>
+      <details key="end" value="825"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/refinements/%/%.7/%/%.7/%.4">
+      <details key="start" value="846"/>
+      <details key="end" value="849"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/refinements/%/%.7/%/%.7/resolution">
+      <details key="start" value="686"/>
+      <details key="end" value="718"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/refinements/%/%.7/%/%.7/%.5">
+      <details key="start" value="721"/>
+      <details key="end" value="738"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/refinements/%/%.7/%/%.7/%.5/awreqs">
+      <details key="start" value="721"/>
+      <details key="end" value="727"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/refinements/%/%.7/%/%.8">
+      <details key="start" value="864"/>
+      <details key="end" value="1452"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/refinements/%/%.7/%/%.8/%">
+      <details key="start" value="927"/>
+      <details key="end" value="1441"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/refinements/%/%.7/%/%.8/%/%">
+      <details key="start" value="972"/>
+      <details key="end" value="1026"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/refinements/%/%.7/%/%.8/%/%.1">
+      <details key="start" value="1027"/>
+      <details key="end" value="1042"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/refinements/%/%.7/%/%.8/%/%.1/strategies">
+      <details key="start" value="1027"/>
+      <details key="end" value="1037"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/refinements/%/%.7/%/%.8/%/%.2">
+      <details key="start" value="1044"/>
+      <details key="end" value="1046"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/refinements/%/%.7/%/%.8/%/%.3">
+      <details key="start" value="1047"/>
+      <details key="end" value="1076"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/refinements/%/%.7/%/%.8/%/%.3/strategies">
+      <details key="start" value="1047"/>
+      <details key="end" value="1057"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/refinements/%/%.7/%/%.8/%/%.4">
+      <details key="start" value="1078"/>
+      <details key="end" value="1080"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/refinements/%/%.7/%/%.8/%/%.5">
+      <details key="start" value="1085"/>
+      <details key="end" value="1292"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/refinements/%/%.7/%/%.8/%/%.5/%">
+      <details key="start" value="1162"/>
+      <details key="end" value="1216"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/refinements/%/%.7/%/%.8/%/%.5/%.1">
+      <details key="start" value="1217"/>
+      <details key="end" value="1237"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/refinements/%/%.7/%/%.8/%/%.5/%.1/applicabilities">
+      <details key="start" value="1217"/>
+      <details key="end" value="1232"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/refinements/%/%.7/%/%.8/%/%.5/%.2">
+      <details key="start" value="1239"/>
+      <details key="end" value="1241"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/refinements/%/%.7/%/%.8/%/%.5/%.3">
+      <details key="start" value="1242"/>
+      <details key="end" value="1276"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/refinements/%/%.7/%/%.8/%/%.5/%.3/applicabilities">
+      <details key="start" value="1242"/>
+      <details key="end" value="1257"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/refinements/%/%.7/%/%.8/%/%.5/%.4">
+      <details key="start" value="1278"/>
+      <details key="end" value="1281"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/refinements/%/%.7/%/%.8/%/%.5/applicabilities">
+      <details key="start" value="1090"/>
+      <details key="end" value="1130"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/refinements/%/%.7/%/%.8/%/%.5/%.5">
+      <details key="start" value="1133"/>
+      <details key="end" value="1159"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/refinements/%/%.7/%/%.8/%/%.5/%.5/strategies">
+      <details key="start" value="1133"/>
+      <details key="end" value="1143"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/refinements/%/%.7/%/%.8/%/%.6">
+      <details key="start" value="1293"/>
+      <details key="end" value="1311"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/refinements/%/%.7/%/%.8/%/%.7">
+      <details key="start" value="930"/>
+      <details key="end" value="970"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/refinements/%/%.7/%/%.8/%/%.7/%">
+      <details key="start" value="931"/>
+      <details key="end" value="965"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/refinements/%/%.7/%/%.8/%/%.7/%/%">
+      <details key="start" value="931"/>
+      <details key="end" value="957"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/refinements/%/%.7/%/%.8/%/%.7/%/%/strategies">
+      <details key="start" value="931"/>
+      <details key="end" value="941"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/refinements/%/%.7/%/%.8/%/%.7/%.1">
+      <details key="start" value="968"/>
+      <details key="end" value="969"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/refinements/%/%.7/%/%.8/%/%.8">
+      <details key="start" value="1315"/>
+      <details key="end" value="1436"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/refinements/%/%.7/%/%.8/%/%.8/%">
+      <details key="start" value="1322"/>
+      <details key="end" value="1377"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/refinements/%/%.7/%/%.8/%/%.8/%.1">
+      <details key="start" value="1378"/>
+      <details key="end" value="1393"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/refinements/%/%.7/%/%.8/%/%.8/%.1/strategies">
+      <details key="start" value="1378"/>
+      <details key="end" value="1388"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/refinements/%/%.7/%/%.8/%/%.8/%.2">
+      <details key="start" value="1395"/>
+      <details key="end" value="1397"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/refinements/%/%.7/%/%.8/%/%.8/%.3">
+      <details key="start" value="1398"/>
+      <details key="end" value="1427"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/refinements/%/%.7/%/%.8/%/%.8/%.3/strategies">
+      <details key="start" value="1398"/>
+      <details key="end" value="1408"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/refinements/%/%.7/%/%.8/%/%.8/%.4">
+      <details key="start" value="1429"/>
+      <details key="end" value="1432"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/refinements/%/%.7/%/%.8/strategies">
+      <details key="start" value="869"/>
+      <details key="end" value="900"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/refinements/%/%.7/%/%.8/%.1">
+      <details key="start" value="903"/>
+      <details key="end" value="920"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/refinements/%/%.7/%/%.8/%.1/awreqs">
+      <details key="start" value="903"/>
+      <details key="end" value="909"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/refinements/%/%.7/%/%.9">
+      <details key="start" value="1453"/>
+      <details key="end" value="1466"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/refinements/%/%.7/%/%.10">
+      <details key="start" value="510"/>
+      <details key="end" value="574"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/refinements/%/%.7/%/%.10/%">
+      <details key="start" value="511"/>
+      <details key="end" value="540"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/refinements/%/%.7/%/%.10/%/%">
+      <details key="start" value="511"/>
+      <details key="end" value="536"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/refinements/%/%.7/%/%.10/%/%/%">
+      <details key="start" value="511"/>
+      <details key="end" value="528"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/refinements/%/%.7/%/%.10/%/%/%/awreqs">
+      <details key="start" value="511"/>
+      <details key="end" value="517"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/refinements/%/%.7/%/%.10/%/%.1">
+      <details key="start" value="539"/>
+      <details key="end" value="540"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/refinements/%/%.7/%/%.10/%.1">
+      <details key="start" value="544"/>
+      <details key="end" value="573"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/refinements/%/%.7/%/%.10/%.1/%">
+      <details key="start" value="544"/>
+      <details key="end" value="569"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/refinements/%/%.7/%/%.10/%.1/%/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/refinements/%/%.7/%/%.10/%.1/%/%/%/%">
+      <details key="start" value="544"/>
+      <details key="end" value="561"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/refinements/%/%.7/%/%.10/%.1/%/%/%/%/awreqs">
+      <details key="start" value="544"/>
+      <details key="end" value="550"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/refinements/%/%.7/%/%.10/%.1/%.1">
+      <details key="start" value="572"/>
+      <details key="end" value="573"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/refinements/%/%.7/%/%.11">
+      <details key="start" value="1469"/>
+      <details key="end" value="1581"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/refinements/%/%.7/%/%.11/%">
+      <details key="start" value="1476"/>
+      <details key="end" value="1497"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/refinements/%/%.7/%/%.11/%.1">
+      <details key="start" value="1498"/>
+      <details key="end" value="1518"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/refinements/%/%.7/%/%.11/%.1/aGoalModel">
+      <details key="start" value="1498"/>
+      <details key="end" value="1508"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/refinements/%/%.7/%/%.11/%.2">
+      <details key="start" value="1520"/>
+      <details key="end" value="1521"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/refinements/%/%.7/%/%.11/%.3">
+      <details key="start" value="1522"/>
+      <details key="end" value="1543"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/refinements/%/%.7/%/%.11/%.3/awreqs">
+      <details key="start" value="1522"/>
+      <details key="end" value="1528"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/refinements/%/%.7/%/%.11/%.4">
+      <details key="start" value="1545"/>
+      <details key="end" value="1547"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/refinements/%/%.7/%/%.11/%.5">
+      <details key="start" value="1548"/>
+      <details key="end" value="1573"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/refinements/%/%.7/%/%.11/%.5/awreqs">
+      <details key="start" value="1548"/>
+      <details key="end" value="1554"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/refinements/%/%.7/%/%.11/%.6">
+      <details key="start" value="1575"/>
+      <details key="end" value="1578"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/refinements/%/%.7/awreqs">
+      <details key="start" value="465"/>
+      <details key="end" value="479"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/refinements/%/%.7/%.1">
+      <details key="start" value="482"/>
+      <details key="end" value="501"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/refinements/%/%.7/%.1/aGOREElement">
+      <details key="start" value="482"/>
+      <details key="end" value="494"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/refinements/%/%.8">
+      <details key="start" value="1598"/>
+      <details key="end" value="1754"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/refinements/%/%.8/%">
+      <details key="start" value="1663"/>
+      <details key="end" value="1689"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/refinements/%/%.8/%.1">
+      <details key="start" value="1690"/>
+      <details key="end" value="1710"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/refinements/%/%.8/%.1/aGoalModel">
+      <details key="start" value="1690"/>
+      <details key="end" value="1700"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/refinements/%/%.8/%.2">
+      <details key="start" value="1712"/>
+      <details key="end" value="1713"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/refinements/%/%.8/%.3">
+      <details key="start" value="1714"/>
+      <details key="end" value="1740"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/refinements/%/%.8/%.3/assumptions">
+      <details key="start" value="1714"/>
+      <details key="end" value="1725"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/refinements/%/%.8/%.4">
+      <details key="start" value="1742"/>
+      <details key="end" value="1746"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/refinements/%/%.8/assumptions">
+      <details key="start" value="1603"/>
+      <details key="end" value="1633"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/refinements/%/%.8/%.5">
+      <details key="start" value="1636"/>
+      <details key="end" value="1660"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/refinements/%/%.8/%.5/aGOREElement">
+      <details key="start" value="1636"/>
+      <details key="end" value="1648"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/refinements/%/%.9">
+      <details key="start" value="1757"/>
+      <details key="end" value="1987"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/refinements/%/%.9/%">
+      <details key="start" value="1801"/>
+      <details key="end" value="1979"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/refinements/%/%.9/%/%">
+      <details key="start" value="1887"/>
+      <details key="end" value="1913"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/refinements/%/%.9/%/%.1">
+      <details key="start" value="1914"/>
+      <details key="end" value="1934"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/refinements/%/%.9/%/%.1/aGoalModel">
+      <details key="start" value="1914"/>
+      <details key="end" value="1924"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/refinements/%/%.9/%/%.2">
+      <details key="start" value="1936"/>
+      <details key="end" value="1937"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/refinements/%/%.9/%/%.3">
+      <details key="start" value="1938"/>
+      <details key="end" value="1964"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/refinements/%/%.9/%/%.3/constraints">
+      <details key="start" value="1938"/>
+      <details key="end" value="1949"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/refinements/%/%.9/%/%.4">
+      <details key="start" value="1966"/>
+      <details key="end" value="1970"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/refinements/%/%.9/%/constraints">
+      <details key="start" value="1806"/>
+      <details key="end" value="1837"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/refinements/%/%.9/%/%.5">
+      <details key="start" value="1840"/>
+      <details key="end" value="1884"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/refinements/%/%.9/%/%.5/%">
+      <details key="start" value="1840"/>
+      <details key="end" value="1872"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/refinements/%/%.9/%/%.5/%/aGOREElement">
+      <details key="start" value="1840"/>
+      <details key="end" value="1852"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/refinements/%/%.9/%/%.5/%/%">
+      <details key="start" value="1863"/>
+      <details key="end" value="1871"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/refinements/%/%.9/%.1">
+      <details key="start" value="1760"/>
+      <details key="end" value="1796"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/refinements/%/%.9/%.1/aGOREElement">
+      <details key="start" value="1761"/>
+      <details key="end" value="1773"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/refinements/%/%.9/%.1/%">
+      <details key="start" value="1786"/>
+      <details key="end" value="1794"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/refinements/%/%.10">
+      <details key="start" value="1990"/>
+      <details key="end" value="2104"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/refinements/%/%.10/%">
+      <details key="start" value="2052"/>
+      <details key="end" value="2055"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/refinements/%/%.10/%.1">
+      <details key="start" value="2056"/>
+      <details key="end" value="2093"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/refinements/%/%.10/%.1/aGoalModel">
+      <details key="start" value="2079"/>
+      <details key="end" value="2089"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/refinements/%/%.10/%.1/c">
+      <details key="start" value="2091"/>
+      <details key="end" value="2092"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/refinements/%/%.10/%.2">
+      <details key="start" value="2095"/>
+      <details key="end" value="2096"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/refinements/%/%.10/c">
+      <details key="start" value="1995"/>
+      <details key="end" value="2022"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/refinements/%/%.10/%.3">
+      <details key="start" value="2025"/>
+      <details key="end" value="2049"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/refinements/%/%.10/%.3/aGOREElement">
+      <details key="start" value="2025"/>
+      <details key="end" value="2037"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/refinements/%/%.11">
+      <details key="start" value="2105"/>
+      <details key="end" value="2121"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/refinements/%/%.12">
+      <details key="start" value="225"/>
+      <details key="end" value="339"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/refinements/%/%.12/%">
+      <details key="start" value="227"/>
+      <details key="end" value="298"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/refinements/%/%.12/%/%">
+      <details key="start" value="227"/>
+      <details key="end" value="263"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/refinements/%/%.12/%/%/%">
+      <details key="start" value="227"/>
+      <details key="end" value="259"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/refinements/%/%.12/%/%/%/%">
+      <details key="start" value="227"/>
+      <details key="end" value="251"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/refinements/%/%.12/%/%/%/%/aGOREElement">
+      <details key="start" value="227"/>
+      <details key="end" value="239"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/refinements/%/%.12/%/%/%.1">
+      <details key="start" value="262"/>
+      <details key="end" value="263"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/refinements/%/%.12/%/%.1">
+      <details key="start" value="267"/>
+      <details key="end" value="298"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/refinements/%/%.12/%/%.1/%">
+      <details key="start" value="267"/>
+      <details key="end" value="294"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/refinements/%/%.12/%/%.1/%/%">
+      <details key="start" value="267"/>
+      <details key="end" value="286"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/refinements/%/%.12/%/%.1/%/%/aGOREElement">
+      <details key="start" value="267"/>
+      <details key="end" value="279"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/refinements/%/%.12/%/%.1/%.1">
+      <details key="start" value="297"/>
+      <details key="end" value="298"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/refinements/%/%.12/%.1">
+      <details key="start" value="302"/>
+      <details key="end" value="338"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/refinements/%/%.12/%.1/%">
+      <details key="start" value="302"/>
+      <details key="end" value="334"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/refinements/%/%.12/%.1/%/%">
+      <details key="start" value="302"/>
+      <details key="end" value="326"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/refinements/%/%.12/%.1/%/%/aGOREElement">
+      <details key="start" value="302"/>
+      <details key="end" value="314"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/refinements/%/%.12/%.1/%.1">
+      <details key="start" value="337"/>
+      <details key="end" value="338"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/refinements/%/%.13">
+      <details key="start" value="2678"/>
+      <details key="end" value="2803"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/refinements/%/%.13/%">
+      <details key="start" value="2685"/>
+      <details key="end" value="2709"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/refinements/%/%.13/%.1">
+      <details key="start" value="2710"/>
+      <details key="end" value="2730"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/refinements/%/%.13/%.1/aGoalModel">
+      <details key="start" value="2710"/>
+      <details key="end" value="2720"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/refinements/%/%.13/%.2">
+      <details key="start" value="2732"/>
+      <details key="end" value="2733"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/refinements/%/%.13/%.3">
+      <details key="start" value="2734"/>
+      <details key="end" value="2761"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/refinements/%/%.13/%.3/aGOREElement">
+      <details key="start" value="2734"/>
+      <details key="end" value="2746"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/refinements/%/%.13/%.4">
+      <details key="start" value="2763"/>
+      <details key="end" value="2765"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/refinements/%/%.13/%.5">
+      <details key="start" value="2766"/>
+      <details key="end" value="2797"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/refinements/%/%.13/%.5/aGOREElement">
+      <details key="start" value="2766"/>
+      <details key="end" value="2778"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/refinements/%/%.13/%.6">
+      <details key="start" value="2799"/>
+      <details key="end" value="2802"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/refinements/%/%.14">
+      <details key="start" value="2122"/>
+      <details key="end" value="2678"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/refinements/%/%.14/%">
+      <details key="start" value="2168"/>
+      <details key="end" value="2676"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/refinements/%/%.14/%/%">
+      <details key="start" value="2231"/>
+      <details key="end" value="2255"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/refinements/%/%.14/%/%.1">
+      <details key="start" value="2256"/>
+      <details key="end" value="2276"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/refinements/%/%.14/%/%.1/aGoalModel">
+      <details key="start" value="2256"/>
+      <details key="end" value="2266"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/refinements/%/%.14/%/%.2">
+      <details key="start" value="2278"/>
+      <details key="end" value="2279"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/refinements/%/%.14/%/%.3">
+      <details key="start" value="2280"/>
+      <details key="end" value="2307"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/refinements/%/%.14/%/%.3/aGOREElement">
+      <details key="start" value="2280"/>
+      <details key="end" value="2292"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/refinements/%/%.14/%/%.4">
+      <details key="start" value="2309"/>
+      <details key="end" value="2311"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/refinements/%/%.14/%/%.5">
+      <details key="start" value="2312"/>
+      <details key="end" value="2343"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/refinements/%/%.14/%/%.5/aGOREElement">
+      <details key="start" value="2312"/>
+      <details key="end" value="2324"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/refinements/%/%.14/%/%.6">
+      <details key="start" value="2345"/>
+      <details key="end" value="2347"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/refinements/%/%.14/%/%.7">
+      <details key="start" value="2350"/>
+      <details key="end" value="2528"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/refinements/%/%.14/%/%.7/%">
+      <details key="start" value="2436"/>
+      <details key="end" value="2462"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/refinements/%/%.14/%/%.7/%.1">
+      <details key="start" value="2463"/>
+      <details key="end" value="2483"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/refinements/%/%.14/%/%.7/%.1/aGoalModel">
+      <details key="start" value="2463"/>
+      <details key="end" value="2473"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/refinements/%/%.14/%/%.7/%.2">
+      <details key="start" value="2485"/>
+      <details key="end" value="2486"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.182" references="/0/refinements/%/%.14/%/%.7/%.3">
+      <details key="start" value="2487"/>
+      <details key="end" value="2513"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.183" references="/0/refinements/%/%.14/%/%.7/%.3/constraints">
+      <details key="start" value="2487"/>
+      <details key="end" value="2498"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.184" references="/0/refinements/%/%.14/%/%.7/%.4">
+      <details key="start" value="2515"/>
+      <details key="end" value="2519"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.185" references="/0/refinements/%/%.14/%/%.7/constraints">
+      <details key="start" value="2355"/>
+      <details key="end" value="2386"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.186" references="/0/refinements/%/%.14/%/%.7/%.5">
+      <details key="start" value="2389"/>
+      <details key="end" value="2433"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.187" references="/0/refinements/%/%.14/%/%.7/%.5/%">
+      <details key="start" value="2389"/>
+      <details key="end" value="2421"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.188" references="/0/refinements/%/%.14/%/%.7/%.5/%/aGOREElement">
+      <details key="start" value="2389"/>
+      <details key="end" value="2401"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.189" references="/0/refinements/%/%.14/%/%.7/%.5/%/%">
+      <details key="start" value="2412"/>
+      <details key="end" value="2420"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.190" references="/0/refinements/%/%.14/%/%.8">
+      <details key="start" value="2529"/>
+      <details key="end" value="2545"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.191" references="/0/refinements/%/%.14/%/%.9">
+      <details key="start" value="2171"/>
+      <details key="end" value="2229"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.192" references="/0/refinements/%/%.14/%/%.9/%">
+      <details key="start" value="2172"/>
+      <details key="end" value="2224"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.193" references="/0/refinements/%/%.14/%/%.9/%/%">
+      <details key="start" value="2172"/>
+      <details key="end" value="2216"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.194" references="/0/refinements/%/%.14/%/%.9/%/%/%">
+      <details key="start" value="2172"/>
+      <details key="end" value="2204"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.195" references="/0/refinements/%/%.14/%/%.9/%/%/%/aGOREElement">
+      <details key="start" value="2172"/>
+      <details key="end" value="2184"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.196" references="/0/refinements/%/%.14/%/%.9/%/%/%/%">
+      <details key="start" value="2195"/>
+      <details key="end" value="2203"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.197" references="/0/refinements/%/%.14/%/%.9/%.1">
+      <details key="start" value="2227"/>
+      <details key="end" value="2228"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.198" references="/0/refinements/%/%.14/%/%.10">
+      <details key="start" value="2546"/>
+      <details key="end" value="2671"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.199" references="/0/refinements/%/%.14/%/%.10/%">
+      <details key="start" value="2553"/>
+      <details key="end" value="2577"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.200" references="/0/refinements/%/%.14/%/%.10/%.1">
+      <details key="start" value="2578"/>
+      <details key="end" value="2598"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.201" references="/0/refinements/%/%.14/%/%.10/%.1/aGoalModel">
+      <details key="start" value="2578"/>
+      <details key="end" value="2588"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.202" references="/0/refinements/%/%.14/%/%.10/%.2">
+      <details key="start" value="2600"/>
+      <details key="end" value="2601"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.203" references="/0/refinements/%/%.14/%/%.10/%.3">
+      <details key="start" value="2602"/>
+      <details key="end" value="2629"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.204" references="/0/refinements/%/%.14/%/%.10/%.3/aGOREElement">
+      <details key="start" value="2602"/>
+      <details key="end" value="2614"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.205" references="/0/refinements/%/%.14/%/%.10/%.4">
+      <details key="start" value="2631"/>
+      <details key="end" value="2633"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.206" references="/0/refinements/%/%.14/%/%.10/%.5">
+      <details key="start" value="2634"/>
+      <details key="end" value="2665"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.207" references="/0/refinements/%/%.14/%/%.10/%.5/aGOREElement">
+      <details key="start" value="2634"/>
+      <details key="end" value="2646"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.208" references="/0/refinements/%/%.14/%/%.10/%.6">
+      <details key="start" value="2667"/>
+      <details key="end" value="2670"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.209" references="/0/refinements/%/%.14/%.1">
+      <details key="start" value="2129"/>
+      <details key="end" value="2165"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.210" references="/0/refinements/%/%.14/%.1/aGOREElement">
+      <details key="start" value="2130"/>
+      <details key="end" value="2142"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.211" references="/0/refinements/%/%.14/%.1/%">
+      <details key="start" value="2155"/>
+      <details key="end" value="2163"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.212" references="/0/refinements/aGoalModel">
+      <details key="start" value="156"/>
+      <details key="end" value="178"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.213" references="/0/refinements/aGOREElement">
+      <details key="start" value="180"/>
+      <details key="end" value="218"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

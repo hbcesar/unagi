@@ -5,6 +5,14 @@
 
 [template public unagi(aGoalModel : GoalModel)]
 [comment @main/]
+[file ('log.txt', false, 'UTF-8')]
+	[if(aGoalModel.rootGoal.oclIsUndefined() or aGoalModel.modelName.oclIsUndefined())]
+ERROR: Model Name or Root Goal were not defined.
+	[else]
+Model was successfully converted.
+	[/if]
+[/file]
 [aGoalModel.generateMetaModel()/]
 [aGoalModel.generateModel()/]
+
 [/template]

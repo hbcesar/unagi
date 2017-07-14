@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generateModel" nsURI="gore::unagi::converter::generateModel" startHeaderPosition="29" endHeaderPosition="172">
+    <input>
+      <takesTypesFrom href="http://www.nemo.inf.ufes.br/gore#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://www.nemo.inf.ufes.br/gore/eca#/"/>
+    </input>
+    <imports href="refinements.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateModel" visibility="Public">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;"/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+        <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/toUpperFirst">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+          </source>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="GoalModel xmi:version=&quot;2.0&quot; xmlns:xmi=&quot;http://www.omg.org/XMI&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:scheduler=&quot;https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/scheduler/scheduler.ecore&quot; xmlns:it.unitn.disi.zanshin.model=&quot;https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/eca.ecore&quot;>&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;rootGoal xsi:type=&quot;"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Hardgoal"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/rootGoal"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Hardgoal"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/rootGoal"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//Hardgoal/getAllParameters"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+            <body xsi:type="mtl:TemplateInvocation">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <definition href="refinements.emtl#/0/refinements"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:VariableExp" name="ref" referredVariable="/0/generateModel/%/%.5/%.7/ref">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+            <loopVariable name="ref">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(GoalOrientedRequirement)">
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Hardgoal"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/rootGoal"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement/refinements"/>
+            </iterSet>
+          </body>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;awreqs xsi:type=&quot;"/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/generateModel/%/%.5/%.8/awreqs">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/name"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+              <body xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/generateModel/%/%.5/%.8/awreqs">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//AwReq/getAllParameters"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
+              <body xsi:type="mtl:ForBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;condition xsi:type=&quot;it.unitn.disi.zanshin.model:"/>
+                <body xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="resolution" referredVariable="/0/generateModel/%/%.5/%.8/%/%.7/resolution">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition/name"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+                <body xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="resolution" referredVariable="/0/generateModel/%/%.5/%.8/%/%.7/resolution">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition/getAllParameters"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+                <loopVariable name="resolution">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                </loopVariable>
+                <iterSet xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/generateModel/%/%.5/%.8/awreqs">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//AwReq/resolution"/>
+                </iterSet>
+              </body>
+              <body xsi:type="mtl:ForBlock">
+                <body xsi:type="mtl:IfBlock">
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;strategies xsi:type=&quot;it.unitn.disi.zanshin.model:"/>
+                  <body xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/generateModel/%/%.5/%.8/%/%.8/strategies">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/name"/>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+                  <body xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/generateModel/%/%.5/%.8/%/%.8/strategies">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                    </source>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/getAllParameters"/>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
+                  <body xsi:type="mtl:ForBlock">
+                    <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&lt;condition xsi:type=&quot;it.unitn.disi.zanshin.model:"/>
+                    <body xsi:type="ocl.ecore:PropertyCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="applicabilities" referredVariable="/0/generateModel/%/%.5/%.8/%/%.8/%/%.5/applicabilities">
+                        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+                      </source>
+                      <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition/name"/>
+                    </body>
+                    <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;/>&#xA;"/>
+                    <loopVariable name="applicabilities">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+                    </loopVariable>
+                    <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(ApplicabilityCondition)">
+                      <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/generateModel/%/%.5/%.8/%/%.8/strategies">
+                        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                      </source>
+                      <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/applicabilities"/>
+                    </iterSet>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;/strategies>&#xA;"/>
+                  <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                    <source xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                      <source xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(ApplicabilityCondition)">
+                        <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/generateModel/%/%.5/%.8/%/%.8/strategies">
+                          <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                        </source>
+                        <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/applicabilities"/>
+                      </source>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+                    </source>
+                    <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                    </argument>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+                  </ifExpr>
+                  <else>
+                    <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&lt;strategies xsi:type=&quot;it.unitn.disi.zanshin.model:"/>
+                    <body xsi:type="ocl.ecore:PropertyCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/generateModel/%/%.5/%.8/%/%.8/strategies">
+                        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                      </source>
+                      <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/name"/>
+                    </body>
+                    <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+                    <body xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="strategies" referredVariable="/0/generateModel/%/%.5/%.8/%/%.8/strategies">
+                        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                      </source>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy/getAllParameters"/>
+                    </body>
+                    <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+                  </else>
+                </body>
+                <loopVariable name="strategies">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+                </loopVariable>
+                <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(AdaptationStrategy)">
+                  <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/generateModel/%/%.5/%.8/awreqs">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//AwReq/strategies"/>
+                </iterSet>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;/awreqs>&#xA;"/>
+              <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                    <source xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(AdaptationStrategy)">
+                      <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/generateModel/%/%.5/%.8/awreqs">
+                        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                      </source>
+                      <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//AwReq/strategies"/>
+                    </source>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+                </source>
+                <argument xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                    <source xsi:type="ocl.ecore:CollectionLiteralExp" eType="/10/Set(ResolutionCondition)">
+                      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL/Annotations">
+                        <details key="IMPLICIT_SET_CONVERSION" value="true"/>
+                      </eAnnotations>
+                      <part xsi:type="ocl.ecore:CollectionItem">
+                        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                        <item xsi:type="ocl.ecore:PropertyCallExp">
+                          <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+                          <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/generateModel/%/%.5/%.8/awreqs">
+                            <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                          </source>
+                          <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//AwReq/resolution"/>
+                        </item>
+                      </part>
+                    </source>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Set(T)_Class/size"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/or"/>
+              </ifExpr>
+              <else>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;awreqs xsi:type=&quot;"/>
+                <body xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+                <body xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/generateModel/%/%.5/%.8/awreqs">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/name"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+                <body xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="awreqs" referredVariable="/0/generateModel/%/%.5/%.8/awreqs">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//AwReq/getAllParameters"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+              </else>
+            </body>
+            <loopVariable name="awreqs">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(AwReq)">
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Hardgoal"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/rootGoal"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/awreqs"/>
+            </iterSet>
+          </body>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;assumptions xsi:type=&quot;"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="assumptions" referredVariable="/0/generateModel/%/%.5/%.9/assumptions">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GOREElement/name"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;/>&#xA;"/>
+            <loopVariable name="assumptions">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(DomainAssumption)">
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Hardgoal"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/rootGoal"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement/assumptions"/>
+            </iterSet>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;/rootGoal>&#xA;"/>
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;configuration>&#xA;"/>
+              <body xsi:type="mtl:ForBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;parameters xsi:type=&quot;"/>
+                <body xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+                <body xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="param" referredVariable="/0/generateModel/%/%.5/%.11/%/%.1/param">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Parameter"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//Parameter/name"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+                <body xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="param" referredVariable="/0/generateModel/%/%.5/%.11/%/%.1/param">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Parameter"/>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.nemo.inf.ufes.br/gore#//Parameter/getAllParameters"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;"/>
+                <loopVariable name="param">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Parameter"/>
+                </loopVariable>
+                <iterSet xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Parameter"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="conf" referredVariable="/0/generateModel/%/%.5/%.11/%/conf">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Configuration"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//Configuration/parameters"/>
+                </iterSet>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;/configuration>&#xA;"/>
+              <loopVariable name="conf">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Configuration"/>
+              </loopVariable>
+              <iterSet xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Configuration"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/configuration"/>
+              </iterSet>
+            </body>
+            <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Configuration"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/configuration"/>
+              </source>
+              <argument xsi:type="ocl.ecore:NullLiteralExp">
+                <eType xsi:type="ocl.ecore:VoidType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/%3C%3E"/>
+            </ifExpr>
+          </body>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;relations />&#xA;"/>
+            <loopVariable name="relation">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DifferentialRelation"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(DifferentialRelation)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/relations"/>
+            </iterSet>
+          </body>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:CollectionLiteralExp" eType="/10/Set(Hardgoal)">
+                <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL/Annotations">
+                  <details key="IMPLICIT_SET_CONVERSION" value="true"/>
+                </eAnnotations>
+                <part xsi:type="ocl.ecore:CollectionItem">
+                  <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Hardgoal"/>
+                  <item xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Hardgoal"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                      <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EReference" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/rootGoal"/>
+                  </item>
+                </part>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Set(T)_Class/size"/>
+            </source>
+            <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+          </ifExpr>
+          <else>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;ERROR: Rootgoal is not defined.&#xA;"/>
+          </else>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&lt;"/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=":"/>
+        <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/toUpperFirst">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+                <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLower"/>
+          </source>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="model.">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aGoalModel" referredVariable="/0/generateModel/aGoalModel">
+              <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.nemo.inf.ufes.br/gore#//GoalModel/modelName"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="aGoalModel">
+        <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="toUpperFirst">
+        <eAnnotations source="MTL"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateModel">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateModel"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aGoalModel">
+          <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="refinements">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="refinements.emtl#/0/refinements"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aGoalModel">
+          <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+        </eParameters>
+        <eParameters name="aGOREElement">
+          <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="gore_GoalModel_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Hardgoal)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Hardgoal"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(GoalOrientedRequirement)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(AwReq)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(AdaptationStrategy)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(AdaptationStrategy)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ResolutionCondition)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ApplicabilityCondition)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ApplicabilityCondition)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(DomainAssumption)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(DifferentialRelation)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DifferentialRelation"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalOrientedRequirement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ResolutionCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//ApplicabilityCondition"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore/eca#//AdaptationStrategy"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//AwReq"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DomainAssumption"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Configuration"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Configuration"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//Configuration"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//DifferentialRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.nemo.inf.ufes.br/gore#//GoalModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateModel">
+      <details key="start" value="176"/>
+      <details key="end" value="2904"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateModel/%">
+      <details key="start" value="232"/>
+      <details key="end" value="2892"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateModel/%/%">
+      <details key="start" value="295"/>
+      <details key="end" value="335"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateModel/%/%.1">
+      <details key="start" value="336"/>
+      <details key="end" value="366"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateModel/%/%.1/%">
+      <details key="start" value="336"/>
+      <details key="end" value="356"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateModel/%/%.1/%/aGoalModel">
+      <details key="start" value="336"/>
+      <details key="end" value="346"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateModel/%/%.2">
+      <details key="start" value="368"/>
+      <details key="end" value="369"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateModel/%/%.3">
+      <details key="start" value="370"/>
+      <details key="end" value="415"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateModel/%/%.3/%">
+      <details key="start" value="370"/>
+      <details key="end" value="400"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateModel/%/%.3/%/%">
+      <details key="start" value="370"/>
+      <details key="end" value="390"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateModel/%/%.3/%/%/aGoalModel">
+      <details key="start" value="370"/>
+      <details key="end" value="380"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateModel/%/%.4">
+      <details key="start" value="417"/>
+      <details key="end" value="838"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateModel/%/%.5">
+      <details key="start" value="838"/>
+      <details key="end" value="2796"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateModel/%/%.5/%">
+      <details key="start" value="876"/>
+      <details key="end" value="897"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateModel/%/%.5/%.1">
+      <details key="start" value="898"/>
+      <details key="end" value="918"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateModel/%/%.5/%.1/aGoalModel">
+      <details key="start" value="898"/>
+      <details key="end" value="908"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateModel/%/%.5/%.2">
+      <details key="start" value="920"/>
+      <details key="end" value="921"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateModel/%/%.5/%.3">
+      <details key="start" value="922"/>
+      <details key="end" value="946"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateModel/%/%.5/%.3/%">
+      <details key="start" value="922"/>
+      <details key="end" value="941"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateModel/%/%.5/%.3/%/aGoalModel">
+      <details key="start" value="922"/>
+      <details key="end" value="932"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateModel/%/%.5/%.4">
+      <details key="start" value="948"/>
+      <details key="end" value="950"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateModel/%/%.5/%.5">
+      <details key="start" value="951"/>
+      <details key="end" value="989"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateModel/%/%.5/%.5/%">
+      <details key="start" value="951"/>
+      <details key="end" value="970"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateModel/%/%.5/%.5/%/aGoalModel">
+      <details key="start" value="951"/>
+      <details key="end" value="961"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateModel/%/%.5/%.6">
+      <details key="start" value="991"/>
+      <details key="end" value="993"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateModel/%/%.5/%.7">
+      <details key="start" value="994"/>
+      <details key="end" value="1117"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateModel/%/%.5/%.7/%">
+      <details key="start" value="1065"/>
+      <details key="end" value="1067"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateModel/%/%.5/%.7/%.1">
+      <details key="start" value="1068"/>
+      <details key="end" value="1107"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateModel/%/%.5/%.7/%.1/aGoalModel">
+      <details key="start" value="1091"/>
+      <details key="end" value="1101"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateModel/%/%.5/%.7/%.1/ref">
+      <details key="start" value="1103"/>
+      <details key="end" value="1106"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateModel/%/%.5/%.7/%.2">
+      <details key="start" value="1109"/>
+      <details key="end" value="1110"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateModel/%/%.5/%.7/ref">
+      <details key="start" value="999"/>
+      <details key="end" value="1028"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateModel/%/%.5/%.7/%.3">
+      <details key="start" value="1031"/>
+      <details key="end" value="1062"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateModel/%/%.5/%.7/%.3/%">
+      <details key="start" value="1031"/>
+      <details key="end" value="1050"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateModel/%/%.5/%.7/%.3/%/aGoalModel">
+      <details key="start" value="1031"/>
+      <details key="end" value="1041"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateModel/%/%.5/%.8">
+      <details key="start" value="1119"/>
+      <details key="end" value="2203"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateModel/%/%.5/%.8/%">
+      <details key="start" value="1173"/>
+      <details key="end" value="2194"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateModel/%/%.5/%.8/%/%">
+      <details key="start" value="1242"/>
+      <details key="end" value="1263"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateModel/%/%.5/%.8/%/%.1">
+      <details key="start" value="1264"/>
+      <details key="end" value="1284"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateModel/%/%.5/%.8/%/%.1/aGoalModel">
+      <details key="start" value="1264"/>
+      <details key="end" value="1274"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateModel/%/%.5/%.8/%/%.2">
+      <details key="start" value="1286"/>
+      <details key="end" value="1287"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateModel/%/%.5/%.8/%/%.3">
+      <details key="start" value="1288"/>
+      <details key="end" value="1299"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateModel/%/%.5/%.8/%/%.3/awreqs">
+      <details key="start" value="1288"/>
+      <details key="end" value="1294"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateModel/%/%.5/%.8/%/%.4">
+      <details key="start" value="1301"/>
+      <details key="end" value="1303"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateModel/%/%.5/%.8/%/%.5">
+      <details key="start" value="1304"/>
+      <details key="end" value="1329"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateModel/%/%.5/%.8/%/%.5/awreqs">
+      <details key="start" value="1304"/>
+      <details key="end" value="1310"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateModel/%/%.5/%.8/%/%.6">
+      <details key="start" value="1331"/>
+      <details key="end" value="1333"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateModel/%/%.5/%.8/%/%.7">
+      <details key="start" value="1337"/>
+      <details key="end" value="1515"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateModel/%/%.5/%.8/%/%.7/%">
+      <details key="start" value="1397"/>
+      <details key="end" value="1450"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateModel/%/%.5/%.8/%/%.7/%.1">
+      <details key="start" value="1451"/>
+      <details key="end" value="1466"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateModel/%/%.5/%.8/%/%.7/%.1/resolution">
+      <details key="start" value="1451"/>
+      <details key="end" value="1461"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateModel/%/%.5/%.8/%/%.7/%.2">
+      <details key="start" value="1468"/>
+      <details key="end" value="1470"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateModel/%/%.5/%.8/%/%.7/%.3">
+      <details key="start" value="1471"/>
+      <details key="end" value="1500"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateModel/%/%.5/%.8/%/%.7/%.3/resolution">
+      <details key="start" value="1471"/>
+      <details key="end" value="1481"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateModel/%/%.5/%.8/%/%.7/%.4">
+      <details key="start" value="1502"/>
+      <details key="end" value="1505"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateModel/%/%.5/%.8/%/%.7/resolution">
+      <details key="start" value="1342"/>
+      <details key="end" value="1374"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateModel/%/%.5/%.8/%/%.7/%.5">
+      <details key="start" value="1377"/>
+      <details key="end" value="1394"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateModel/%/%.5/%.8/%/%.7/%.5/awreqs">
+      <details key="start" value="1377"/>
+      <details key="end" value="1383"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateModel/%/%.5/%.8/%/%.8">
+      <details key="start" value="1520"/>
+      <details key="end" value="2070"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateModel/%/%.5/%.8/%/%.8/%">
+      <details key="start" value="1583"/>
+      <details key="end" value="2059"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%">
+      <details key="start" value="1628"/>
+      <details key="end" value="1682"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.1">
+      <details key="start" value="1683"/>
+      <details key="end" value="1698"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.1/strategies">
+      <details key="start" value="1683"/>
+      <details key="end" value="1693"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.2">
+      <details key="start" value="1700"/>
+      <details key="end" value="1702"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.3">
+      <details key="start" value="1703"/>
+      <details key="end" value="1732"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.3/strategies">
+      <details key="start" value="1703"/>
+      <details key="end" value="1713"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.4">
+      <details key="start" value="1734"/>
+      <details key="end" value="1736"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.5">
+      <details key="start" value="1741"/>
+      <details key="end" value="1910"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.5/%">
+      <details key="start" value="1818"/>
+      <details key="end" value="1872"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.5/%.1">
+      <details key="start" value="1873"/>
+      <details key="end" value="1893"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.5/%.1/applicabilities">
+      <details key="start" value="1873"/>
+      <details key="end" value="1888"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.5/%.2">
+      <details key="start" value="1895"/>
+      <details key="end" value="1899"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.5/applicabilities">
+      <details key="start" value="1746"/>
+      <details key="end" value="1786"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.5/%.3">
+      <details key="start" value="1789"/>
+      <details key="end" value="1815"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.5/%.3/strategies">
+      <details key="start" value="1789"/>
+      <details key="end" value="1799"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.6">
+      <details key="start" value="1911"/>
+      <details key="end" value="1929"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.7">
+      <details key="start" value="1586"/>
+      <details key="end" value="1626"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.7/%">
+      <details key="start" value="1587"/>
+      <details key="end" value="1621"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.7/%/%">
+      <details key="start" value="1587"/>
+      <details key="end" value="1613"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.7/%/%/strategies">
+      <details key="start" value="1587"/>
+      <details key="end" value="1597"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.7/%.1">
+      <details key="start" value="1624"/>
+      <details key="end" value="1625"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.8">
+      <details key="start" value="1933"/>
+      <details key="end" value="2054"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.8/%">
+      <details key="start" value="1940"/>
+      <details key="end" value="1995"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.8/%.1">
+      <details key="start" value="1996"/>
+      <details key="end" value="2011"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.8/%.1/strategies">
+      <details key="start" value="1996"/>
+      <details key="end" value="2006"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.8/%.2">
+      <details key="start" value="2013"/>
+      <details key="end" value="2015"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.8/%.3">
+      <details key="start" value="2016"/>
+      <details key="end" value="2045"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.8/%.3/strategies">
+      <details key="start" value="2016"/>
+      <details key="end" value="2026"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generateModel/%/%.5/%.8/%/%.8/%/%.8/%.4">
+      <details key="start" value="2047"/>
+      <details key="end" value="2050"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generateModel/%/%.5/%.8/%/%.8/strategies">
+      <details key="start" value="1525"/>
+      <details key="end" value="1556"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generateModel/%/%.5/%.8/%/%.8/%.1">
+      <details key="start" value="1559"/>
+      <details key="end" value="1576"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generateModel/%/%.5/%.8/%/%.8/%.1/awreqs">
+      <details key="start" value="1559"/>
+      <details key="end" value="1565"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generateModel/%/%.5/%.8/%/%.9">
+      <details key="start" value="2071"/>
+      <details key="end" value="2084"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generateModel/%/%.5/%.8/%/%.10">
+      <details key="start" value="1176"/>
+      <details key="end" value="1240"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generateModel/%/%.5/%.8/%/%.10/%">
+      <details key="start" value="1177"/>
+      <details key="end" value="1206"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generateModel/%/%.5/%.8/%/%.10/%/%">
+      <details key="start" value="1177"/>
+      <details key="end" value="1202"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generateModel/%/%.5/%.8/%/%.10/%/%/%">
+      <details key="start" value="1177"/>
+      <details key="end" value="1194"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generateModel/%/%.5/%.8/%/%.10/%/%/%/awreqs">
+      <details key="start" value="1177"/>
+      <details key="end" value="1183"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generateModel/%/%.5/%.8/%/%.10/%/%.1">
+      <details key="start" value="1205"/>
+      <details key="end" value="1206"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generateModel/%/%.5/%.8/%/%.10/%.1">
+      <details key="start" value="1210"/>
+      <details key="end" value="1239"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generateModel/%/%.5/%.8/%/%.10/%.1/%">
+      <details key="start" value="1210"/>
+      <details key="end" value="1235"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generateModel/%/%.5/%.8/%/%.10/%.1/%/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generateModel/%/%.5/%.8/%/%.10/%.1/%/%/%/%">
+      <details key="start" value="1210"/>
+      <details key="end" value="1227"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generateModel/%/%.5/%.8/%/%.10/%.1/%/%/%/%/awreqs">
+      <details key="start" value="1210"/>
+      <details key="end" value="1216"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generateModel/%/%.5/%.8/%/%.10/%.1/%.1">
+      <details key="start" value="1238"/>
+      <details key="end" value="1239"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generateModel/%/%.5/%.8/%/%.11">
+      <details key="start" value="2087"/>
+      <details key="end" value="2189"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/generateModel/%/%.5/%.8/%/%.11/%">
+      <details key="start" value="2094"/>
+      <details key="end" value="2115"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/generateModel/%/%.5/%.8/%/%.11/%.1">
+      <details key="start" value="2116"/>
+      <details key="end" value="2136"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/generateModel/%/%.5/%.8/%/%.11/%.1/aGoalModel">
+      <details key="start" value="2116"/>
+      <details key="end" value="2126"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/generateModel/%/%.5/%.8/%/%.11/%.2">
+      <details key="start" value="2138"/>
+      <details key="end" value="2139"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/generateModel/%/%.5/%.8/%/%.11/%.3">
+      <details key="start" value="2140"/>
+      <details key="end" value="2151"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/generateModel/%/%.5/%.8/%/%.11/%.3/awreqs">
+      <details key="start" value="2140"/>
+      <details key="end" value="2146"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/generateModel/%/%.5/%.8/%/%.11/%.4">
+      <details key="start" value="2153"/>
+      <details key="end" value="2155"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/generateModel/%/%.5/%.8/%/%.11/%.5">
+      <details key="start" value="2156"/>
+      <details key="end" value="2181"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generateModel/%/%.5/%.8/%/%.11/%.5/awreqs">
+      <details key="start" value="2156"/>
+      <details key="end" value="2162"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/generateModel/%/%.5/%.8/%/%.11/%.6">
+      <details key="start" value="2183"/>
+      <details key="end" value="2186"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/generateModel/%/%.5/%.8/awreqs">
+      <details key="start" value="1124"/>
+      <details key="end" value="1138"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/generateModel/%/%.5/%.8/%.1">
+      <details key="start" value="1141"/>
+      <details key="end" value="1167"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/generateModel/%/%.5/%.8/%.1/%">
+      <details key="start" value="1141"/>
+      <details key="end" value="1160"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/generateModel/%/%.5/%.8/%.1/%/aGoalModel">
+      <details key="start" value="1141"/>
+      <details key="end" value="1151"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/generateModel/%/%.5/%.9">
+      <details key="start" value="2206"/>
+      <details key="end" value="2358"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/generateModel/%/%.5/%.9/%">
+      <details key="start" value="2278"/>
+      <details key="end" value="2304"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/generateModel/%/%.5/%.9/%.1">
+      <details key="start" value="2305"/>
+      <details key="end" value="2325"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/generateModel/%/%.5/%.9/%.1/aGoalModel">
+      <details key="start" value="2305"/>
+      <details key="end" value="2315"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/generateModel/%/%.5/%.9/%.2">
+      <details key="start" value="2327"/>
+      <details key="end" value="2328"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/generateModel/%/%.5/%.9/%.3">
+      <details key="start" value="2329"/>
+      <details key="end" value="2345"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/generateModel/%/%.5/%.9/%.3/assumptions">
+      <details key="start" value="2329"/>
+      <details key="end" value="2340"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/generateModel/%/%.5/%.9/%.4">
+      <details key="start" value="2347"/>
+      <details key="end" value="2351"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/generateModel/%/%.5/%.9/assumptions">
+      <details key="start" value="2211"/>
+      <details key="end" value="2241"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/generateModel/%/%.5/%.9/%.5">
+      <details key="start" value="2244"/>
+      <details key="end" value="2275"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/generateModel/%/%.5/%.9/%.5/%">
+      <details key="start" value="2244"/>
+      <details key="end" value="2263"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/generateModel/%/%.5/%.9/%.5/%/aGoalModel">
+      <details key="start" value="2244"/>
+      <details key="end" value="2254"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/generateModel/%/%.5/%.10">
+      <details key="start" value="2359"/>
+      <details key="end" value="2372"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/generateModel/%/%.5/%.11">
+      <details key="start" value="2373"/>
+      <details key="end" value="2664"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/generateModel/%/%.5/%.11/%">
+      <details key="start" value="2413"/>
+      <details key="end" value="2657"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/generateModel/%/%.5/%.11/%/%">
+      <details key="start" value="2468"/>
+      <details key="end" value="2485"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/generateModel/%/%.5/%.11/%/%.1">
+      <details key="start" value="2487"/>
+      <details key="end" value="2631"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/generateModel/%/%.5/%.11/%/%.1/%">
+      <details key="start" value="2530"/>
+      <details key="end" value="2554"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/generateModel/%/%.5/%.11/%/%.1/%.1">
+      <details key="start" value="2555"/>
+      <details key="end" value="2575"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/generateModel/%/%.5/%.11/%/%.1/%.1/aGoalModel">
+      <details key="start" value="2555"/>
+      <details key="end" value="2565"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/generateModel/%/%.5/%.11/%/%.1/%.2">
+      <details key="start" value="2577"/>
+      <details key="end" value="2578"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/generateModel/%/%.5/%.11/%/%.1/%.3">
+      <details key="start" value="2579"/>
+      <details key="end" value="2589"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/generateModel/%/%.5/%.11/%/%.1/%.3/param">
+      <details key="start" value="2579"/>
+      <details key="end" value="2584"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/generateModel/%/%.5/%.11/%/%.1/%.4">
+      <details key="start" value="2591"/>
+      <details key="end" value="2593"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/generateModel/%/%.5/%.11/%/%.1/%.5">
+      <details key="start" value="2594"/>
+      <details key="end" value="2618"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/generateModel/%/%.5/%.11/%/%.1/%.5/param">
+      <details key="start" value="2594"/>
+      <details key="end" value="2599"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/generateModel/%/%.5/%.11/%/%.1/%.6">
+      <details key="start" value="2620"/>
+      <details key="end" value="2623"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/generateModel/%/%.5/%.11/%/%.1/param">
+      <details key="start" value="2492"/>
+      <details key="end" value="2509"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/generateModel/%/%.5/%.11/%/%.1/%.7">
+      <details key="start" value="2512"/>
+      <details key="end" value="2527"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/generateModel/%/%.5/%.11/%/%.1/%.7/conf">
+      <details key="start" value="2512"/>
+      <details key="end" value="2516"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/generateModel/%/%.5/%.11/%/%.2">
+      <details key="start" value="2632"/>
+      <details key="end" value="2650"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/generateModel/%/%.5/%.11/%/conf">
+      <details key="start" value="2418"/>
+      <details key="end" value="2438"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/generateModel/%/%.5/%.11/%/%.3">
+      <details key="start" value="2441"/>
+      <details key="end" value="2465"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/generateModel/%/%.5/%.11/%/%.3/aGoalModel">
+      <details key="start" value="2441"/>
+      <details key="end" value="2451"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/generateModel/%/%.5/%.11/%.1">
+      <details key="start" value="2376"/>
+      <details key="end" value="2410"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/generateModel/%/%.5/%.11/%.1/%">
+      <details key="start" value="2377"/>
+      <details key="end" value="2401"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/generateModel/%/%.5/%.11/%.1/%/aGoalModel">
+      <details key="start" value="2377"/>
+      <details key="end" value="2387"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/generateModel/%/%.5/%.11/%.1/%.1">
+      <details key="start" value="2405"/>
+      <details key="end" value="2409"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/generateModel/%/%.5/%.12">
+      <details key="start" value="2666"/>
+      <details key="end" value="2750"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/generateModel/%/%.5/%.12/%">
+      <details key="start" value="2728"/>
+      <details key="end" value="2743"/>
+      <details key="line" value="50"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/generateModel/%/%.5/%.12/relation">
+      <details key="start" value="2671"/>
+      <details key="end" value="2702"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/generateModel/%/%.5/%.12/%.1">
+      <details key="start" value="2705"/>
+      <details key="end" value="2725"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/generateModel/%/%.5/%.12/%.1/aGoalModel">
+      <details key="start" value="2705"/>
+      <details key="end" value="2715"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/generateModel/%/%.5/%.13">
+      <details key="start" value="841"/>
+      <details key="end" value="874"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/generateModel/%/%.5/%.13/%">
+      <details key="start" value="842"/>
+      <details key="end" value="869"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/generateModel/%/%.5/%.13/%/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/generateModel/%/%.5/%.13/%/%/%/%">
+      <details key="start" value="842"/>
+      <details key="end" value="861"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/generateModel/%/%.5/%.13/%/%/%/%/aGoalModel">
+      <details key="start" value="842"/>
+      <details key="end" value="852"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/generateModel/%/%.5/%.13/%.1">
+      <details key="start" value="872"/>
+      <details key="end" value="873"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/generateModel/%/%.5/%.14">
+      <details key="start" value="2751"/>
+      <details key="end" value="2791"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/generateModel/%/%.5/%.14/%">
+      <details key="start" value="2758"/>
+      <details key="end" value="2791"/>
+      <details key="line" value="53"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/generateModel/%/%.6">
+      <details key="start" value="2797"/>
+      <details key="end" value="2799"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/generateModel/%/%.7">
+      <details key="start" value="2800"/>
+      <details key="end" value="2830"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/generateModel/%/%.7/%">
+      <details key="start" value="2800"/>
+      <details key="end" value="2820"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/generateModel/%/%.7/%/aGoalModel">
+      <details key="start" value="2800"/>
+      <details key="end" value="2810"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/generateModel/%/%.8">
+      <details key="start" value="2832"/>
+      <details key="end" value="2833"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/generateModel/%/%.9">
+      <details key="start" value="2834"/>
+      <details key="end" value="2879"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/generateModel/%/%.9/%">
+      <details key="start" value="2834"/>
+      <details key="end" value="2864"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/generateModel/%/%.9/%/%">
+      <details key="start" value="2834"/>
+      <details key="end" value="2854"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/generateModel/%/%.9/%/%/aGoalModel">
+      <details key="start" value="2834"/>
+      <details key="end" value="2844"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/generateModel/%/%.10">
+      <details key="start" value="2881"/>
+      <details key="end" value="2885"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/generateModel/%/%.11">
+      <details key="start" value="239"/>
+      <details key="end" value="276"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.182" references="/0/generateModel/%/%.11/%">
+      <details key="start" value="239"/>
+      <details key="end" value="247"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.183" references="/0/generateModel/%/%.11/%.1">
+      <details key="start" value="255"/>
+      <details key="end" value="275"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.184" references="/0/generateModel/%/%.11/%.1/aGoalModel">
+      <details key="start" value="255"/>
+      <details key="end" value="265"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.185" references="/0/generateModel/%/%.12">
+      <details key="start" value="285"/>
+      <details key="end" value="292"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.186" references="/0/generateModel/aGoalModel">
+      <details key="start" value="207"/>
+      <details key="end" value="229"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
