@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="gore" version="11.1.1.201610211630">
-  <ownedViewpoints name="Gore Diagram">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="gore" version="12.0.0.2017041100">
+  <ownedViewpoints name="Gore Diagram" modelFileExtension="gore">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Gore" initialisation="true" domainClass="gore.GoalModel" enablePopupBars="true">
       <metamodel href="http://www.nemo.inf.ufes.br/gore#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="HardGoal" domainClass="gore.Hardgoal">
-          <style xsi:type="style:EllipseNodeDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:EllipseNodeDescription" showIcon="false" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="SoftGoal" domainClass="gore.Softgoal">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/softgoal-icon.png">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="11" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/softgoal-icon.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="Task" domainClass="gore.Task">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/task-icon.png">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/task-icon.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -30,14 +30,14 @@
           </style>
         </nodeMappings>
         <nodeMappings name="QualityConstraint" domainClass="gore.QualityConstraint">
-          <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:SquareDescription" showIcon="false" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" width="10" height="4">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="DomainAssumption" domainClass="gore.DomainAssumption">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/domain-assumption-icon.png">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/domain-assumption-icon.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -54,7 +54,7 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="Hardgoal Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']" targetFinderExpression="feature:refinements">
+        <edgeMappings name="Hardgoal Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal']" targetFinderExpression="feature:parent">
           <conditionnalStyles predicateExpression="[thisEObject.refinementType.toString().equalsIgnoreCase('and')/]">
             <style>
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -64,7 +64,7 @@
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="[thisEObject.refinementType.toString().equalsIgnoreCase('or')/]">
-            <style lineStyle="dash" sizeComputationExpression="2">
+            <style lineStyle="dash" sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <centerLabelStyleDescription>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -72,7 +72,7 @@
             </style>
           </conditionnalStyles>
         </edgeMappings>
-        <edgeMappings name="Softgoal Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint']" targetFinderExpression="feature:constraints">
+        <edgeMappings name="Softgoal to Quality Constraint Edge" label="Softgoal to Quality Constraint Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']" targetFinderExpression="feature:softgoal">
           <style>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -80,7 +80,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Task Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetFinderExpression="feature:refinements">
+        <edgeMappings name="Task Refinement Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetFinderExpression="feature:refinements">
           <style>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -88,7 +88,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="AwReq Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetFinderExpression="feature:target">
+        <edgeMappings name="AwReq Target Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetFinderExpression="feature:target">
           <style>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -96,7 +96,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="DomainAssumption Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetFinderExpression="feature:parent">
+        <edgeMappings name="DomainAssumption Target Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" targetFinderExpression="feature:parent">
           <style>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -105,7 +105,7 @@
           </style>
         </edgeMappings>
         <toolSections name="Node Creation">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new HardGoal" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new HardGoal" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal']" iconPath="/gore.design/icons/hardgoal.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -114,7 +114,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Softgoal" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Softgoal" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']" iconPath="/gore.design/icons/softgoal.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -123,7 +123,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Task" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Task" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task']" iconPath="/gore.design/icons/task.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -132,7 +132,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new AwReq" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new AwReq" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq']" iconPath="/gore.design/icons/ar.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -141,7 +141,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new QualityConstraint" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new QualityConstraint" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='QualityConstraint']" iconPath="/gore.design/icons/qc.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -150,7 +150,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new DomainAssumption" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new DomainAssumption" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='DomainAssumption']" iconPath="/gore.design/icons/da.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -199,34 +199,34 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="refinements" valueExpression="var:target"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="refinements" valueExpression="var:source"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Softgoal Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='Softgoal%20Edge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Quality Constraint to Softgoal Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='Softgoal%20to%20Quality%20Constraint%20Edge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="constraints" valueExpression="var:source"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Task Refinement Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='Task%20Refinement%20Edge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="constraints" valueExpression="var:target"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Task Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='Task%20Edge']">
-            <sourceVariable name="source"/>
-            <targetVariable name="target"/>
-            <sourceViewVariable name="sourceView"/>
-            <targetViewVariable name="targetView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="refinements" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new AwReq Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='AwReq%20Edge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new AwReq Target Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='AwReq%20Target%20Edge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -237,7 +237,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new DomainAssumption Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='DomainAssumption%20Edge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new DomainAssumption Target Edge" edgeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@edgeMappings[name='DomainAssumption%20Target%20Edge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>

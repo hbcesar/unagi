@@ -3,9 +3,9 @@
 [import gore::unagi::converter::refinements /]
 
 [template public generateModel(aGoalModel : GoalModel)]
-[file ('model.'.concat(aGoalModel.modelName), false, 'UTF-8')]
+[file ('model.'.concat(aGoalModel.modelName.replaceAll(' ', '')).toLower(), false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
-<[aGoalModel.modelName.toLower()/]:[aGoalModel.modelName.toLower().toUpperFirst()/]GoalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scheduler="https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/scheduler/scheduler.ecore" xmlns:it.unitn.disi.zanshin.model="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/eca.ecore">
+<[aGoalModel.modelName.toLower().replaceAll(' ', '')/]:[aGoalModel.modelName.toLower().toUpperFirst().replaceAll(' ', '')/]GoalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scheduler="https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/scheduler/scheduler.ecore" xmlns:it.unitn.disi.zanshin.model="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/eca.ecore">
 [if(aGoalModel.rootGoal->size() > 0)]
 	<rootGoal xsi:type="[aGoalModel.modelName/]:[aGoalModel.rootGoal.name/]" [aGoalModel.rootGoal.getAllParameters()/]>
 	[for(ref : GoalOrientedRequirement | aGoalModel.rootGoal.refinements)]
@@ -53,7 +53,7 @@
 	ERROR: Rootgoal is not defined.
 [/if]
 
-<[aGoalModel.modelName.toLower()/]:[aGoalModel.modelName.toLower().toUpperFirst()/]/>
+<[aGoalModel.modelName.toLower().replaceAll(' ', '')/]:[aGoalModel.modelName.toLower().toUpperFirst().replaceAll(' ', '')/]GoalModel/>
 
 [/file]
 [/template]
