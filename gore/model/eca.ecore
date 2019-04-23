@@ -180,7 +180,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="wrappedCondition" eType="#//ApplicabilityCondition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ReconfigurationResolutionCondition"
-      eSuperTypes="#//ApplicabilityCondition"/>
+      eSuperTypes="#//ResolutionCondition"/>
   <eClassifiers xsi:type="ecore:EClass" name="ReconfigurationStrategy" eSuperTypes="#//AdaptationStrategy">
     <eOperations name="getAllParameters" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

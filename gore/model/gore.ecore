@@ -53,7 +53,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="GoalOrientedRequirement" eSuperTypes="#//GOREElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refinementType" eType="#//RefinementType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assumptions" upperBound="-1"
-        eType="#//DomainAssumption" containment="true" eOpposite="#//DomainAssumption/parent"/>
+        eType="#//DomainAssumption" eOpposite="#//DomainAssumption/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="refinements" upperBound="-1"
         eType="#//GoalOrientedRequirement" eOpposite="#//GoalOrientedRequirement/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//GoalOrientedRequirement"
@@ -269,6 +269,7 @@
         eType="#//ParameterMetric"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="internalID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="indicator" eType="#//AwReq"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GOREElementState">
     <eLiterals name="UNDEFINED" literal="undefined"/>

@@ -5,7 +5,7 @@
       <metamodel href="http://www.nemo.inf.ufes.br/gore#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="HardGoal" domainClass="gore.Hardgoal">
-          <style xsi:type="style:EllipseNodeDescription" showIcon="false" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:EllipseNodeDescription" showIcon="false" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="8" verticalDiameterComputationExpression="4">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
@@ -30,16 +30,16 @@
           </style>
         </nodeMappings>
         <nodeMappings name="QualityConstraint" domainClass="gore.QualityConstraint">
-          <style xsi:type="style:SquareDescription" showIcon="false" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" width="10" height="4">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="DomainAssumption" domainClass="gore.DomainAssumption">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="gore.design/icons/domain-assumption-icon.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DomainAssumption" domainClass="gore.DomainAssumption">
+          <style xsi:type="style:SquareDescription" showIcon="false" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW" width="10" height="4">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="Actor" domainClass="gore.Actor">
@@ -55,7 +55,7 @@
           </style>
         </nodeMappings>
         <edgeMappings name="Hardgoal Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal']" targetFinderExpression="feature:parent">
-          <conditionnalStyles predicateExpression="[thisEObject.refinementType.toString().equalsIgnoreCase('and')/]">
+          <conditionnalStyles predicateExpression="[thisEObject.parent.refinementType.toString().equalsIgnoreCase('and')/]">
             <style>
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <centerLabelStyleDescription>
@@ -63,8 +63,8 @@
               </centerLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="[thisEObject.refinementType.toString().equalsIgnoreCase('or')/]">
-            <style lineStyle="dash" sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
+          <conditionnalStyles predicateExpression="[thisEObject.parent.refinementType.toString().equalsIgnoreCase('or')/]">
+            <style lineStyle="dash" sizeComputationExpression="2">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <centerLabelStyleDescription>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -159,7 +159,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Actor" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Actor']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Actor" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Actor']" iconPath="/gore.design/icons/AC.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -168,7 +168,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Configuration" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Configuration']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Configuration" nodeMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Configuration']" iconPath="/gore.design/icons/C.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -180,9 +180,7 @@
           <ownedTools xsi:type="tool:DoubleClickDescription" name="new AwReq Diagram" mappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq']">
             <element name="element"/>
             <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']"/>
-            </initialOperation>
+            <initialOperation/>
           </ownedTools>
           <ownedTools xsi:type="tool:DoubleClickDescription" name="new Configuration Diagram" mappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Configuration']">
             <element name="element"/>
@@ -243,8 +241,8 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="var:target"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="assumptions" valueExpression="var:source"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -256,8 +254,8 @@
       <metamodel href="http://www.nemo.inf.ufes.br/gore#/"/>
       <defaultLayer name="Default">
         <containerMappings name="AwReq Container" semanticCandidatesExpression="var:self" domainClass="gore.AwReq" childrenPresentation="VerticalStack">
-          <subContainerMappings name="Strategy Container" domainClass="eca.AdaptationStrategy" childrenPresentation="VerticalStack">
-            <subContainerMappings name="ApplicabilityCondition Container" domainClass="eca.ApplicabilityCondition" childrenPresentation="VerticalStack">
+          <subContainerMappings name="Strategy Container" semanticCandidatesExpression="feature:eAllContents" domainClass="eca.AdaptationStrategy" childrenPresentation="VerticalStack">
+            <subContainerMappings name="ApplicabilityCondition Container" semanticCandidatesExpression="feature:eAllContents" domainClass="eca.ApplicabilityCondition" childrenPresentation="VerticalStack">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" widthComputationExpression="20" backgroundStyle="Liquid">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -469,17 +467,6 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new SimpleResolutionCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='ResolutionCondition%20Container']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="eca.SimpleResolutionCondition" referenceName="resolution">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="SimpleResolutionCondition"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="new ReconfigurationResolutionCondition" containerMappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']/@defaultLayer/@containerMappings[name='AwReq%20Container']/@subContainerMappings[name='ResolutionCondition%20Container']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -521,6 +508,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.Parameter" referenceName="parameters"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Configuration"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
