@@ -3,10 +3,10 @@
 
 [template public refinements(aGoalModel : GoalModel, aGOREElement : GoalOrientedRequirement)]
 	[if( aGOREElement.refinements->size() > 0 or aGOREElement.awreqs->size() > 0 or aGOREElement.assumptions->size() > 0)]
-	<refinements xsi:type="[aGoalModel.modelName/]:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]">
+	<refinements xsi:type="goremodel:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]>
 		[for(awreqs : AwReq | aGOREElement.awreqs)]
 			[if(awreqs.strategies->size() > 0 or awreqs.resolution->size() > 0)]
-			<awreqs xsi:type="[aGoalModel.modelName/]:[awreqs.getShortName()/]" [awreqs.getAllParameters()/]>
+			<awreqs xsi:type="goremodel:[awreqs.getShortName()/]" [awreqs.getAllParameters()/]>
 				[for(resolution : ResolutionCondition | awreqs.resolution)]
 				<condition xsi:type="it.unitn.disi.zanshin.model:[resolution.name/]" [resolution.getAllParameters()/]/>
 				[/for]
@@ -23,15 +23,15 @@
 				[/for]
 			</awreqs>
 			[else]
-			<awreqs xsi:type="[aGoalModel.modelName/]:[awreqs.getShortName()/]" [awreqs.getAllParameters()/]/>
+			<awreqs xsi:type="goremodel:[awreqs.getShortName()/]" [awreqs.getAllParameters()/]/>
 			[/if]
 		[/for]
 		[for(assumptions : DomainAssumption | aGOREElement.assumptions)]
-			<assumptions xsi:type="[aGoalModel.modelName/]:[assumptions.getShortName()/]"/>
+			<assumptions xsi:type="goremodel:[assumptions.getShortName()/]"/>
 		[/for]
 		[if(aGOREElement.oclIsKindOf(Softgoal))]
 			[for(constraints : QualityConstraint | aGOREElement.oclAsType(Softgoal).constraints)]
-			<constraints xsi:type="[aGoalModel.modelName/]:[constraints.getShortName()/]"/>
+			<constraints xsi:type="goremodel:[constraints.getShortName()/]"/>
 			[/for]
 		[/if]
 		[for(c : GoalOrientedRequirement | aGOREElement.refinements)]
@@ -40,15 +40,15 @@
 	</refinements>
 	[elseif(aGOREElement.oclIsKindOf(Softgoal))]
 	[if(aGOREElement.oclAsType(Softgoal).constraints->size() > 0)]
-	<refinements xsi:type="[aGoalModel.modelName/]:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]>
+	<refinements xsi:type="goremodel:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]>
 			[for(constraints : QualityConstraint | aGOREElement.oclAsType(Softgoal).constraints)]
-			<constraints xsi:type="[aGoalModel.modelName/]:[constraints.getShortName()/]"/>
+			<constraints xsi:type="goremodel:[constraints.getShortName()/]"/>
 			[/for]
 	</refinements>
 	[else]
-	<refinements xsi:type="[aGoalModel.modelName/]:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]/>
+	<refinements xsi:type="goremodel:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]/>
 	[/if]
 	[else]
-	<refinements xsi:type="[aGoalModel.modelName/]:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]/>
+	<refinements xsi:type="goremodel:[aGOREElement.getShortName()/]" [aGOREElement.getAllParameters()/]/>
 	[/if]
 [/template]

@@ -2,6 +2,11 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gore" nsURI="http://www.nemo.inf.ufes.br/gore" nsPrefix="gore">
   <eClassifiers xsi:type="ecore:EClass" name="GoalModel">
+    <eOperations name="getModelShortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return this.modelName.replaceAll(&quot; &quot;, &quot;_&quot;).toLowerCase();"/>
+      </eAnnotations>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rootGoal" eType="#//Hardgoal"
         eOpposite="#//Hardgoal/goalModel"/>
@@ -23,7 +28,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="GOREElement">
     <eOperations name="getShortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+        <details key="body" value="return this.name.replaceAll(&quot; &quot;, &quot;_&quot;);"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="getType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
@@ -100,7 +105,7 @@
       </eAnnotations>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constraints" lowerBound="1"
-        upperBound="-1" eType="#//QualityConstraint" containment="true" eOpposite="#//QualityConstraint/softgoal"/>
+        upperBound="-1" eType="#//QualityConstraint" eOpposite="#//QualityConstraint/softgoal"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//PerformativeRequirement">
     <eOperations name="getShortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
@@ -122,12 +127,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="AwReq" eSuperTypes="#//GOREElement">
     <eOperations name="getShortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return &quot;AR_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+        <details key="body" value="return &quot;AR_&quot; + this.name.replaceAll(&quot; &quot;, &quot;_&quot;);"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="getType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return &quot;EcaAwReq&quot;;"/>
+        <details key="body" value="return &quot;AwReq&quot;;"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="getAllParameters" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
@@ -151,6 +156,11 @@
     <eOperations name="getType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return &quot;QualityConstraint&quot;;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="getAllParameters" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return &quot;&quot;;"/>
       </eAnnotations>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="softgoal" eType="#//Softgoal"

@@ -5,43 +5,43 @@
 [template public generateModel(aGoalModel : GoalModel)]
 [file ('model.'.concat(aGoalModel.modelName.replaceAll(' ', '')).toLower(), false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
-<[aGoalModel.modelName.toLower().replaceAll(' ', '')/]:[aGoalModel.modelName.toLower().toUpperFirst().replaceAll(' ', '')/]GoalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scheduler="https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/scheduler/scheduler.ecore" xmlns:it.unitn.disi.zanshin.model="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/eca.ecore">
+<goremodel:[aGoalModel.getModelShortName()/] xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:goremodel="{Please change}" xmlns:ecamodel="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/eca.ecore">
 [if(aGoalModel.rootGoal->size() > 0)]
-	<rootGoal xsi:type="[aGoalModel.modelName/]:[aGoalModel.rootGoal.name/]" [aGoalModel.rootGoal.getAllParameters()/]>
+	<rootGoal xsi:type="goremodel:[aGoalModel.rootGoal.getShortName()/]" [aGoalModel.rootGoal.getAllParameters()/]>
 	[for(ref : GoalOrientedRequirement | aGoalModel.rootGoal.refinements)]
 		[aGoalModel.refinements(aGoalModel, ref)/]
 	[/for]
 	[for(awreqs : AwReq | aGoalModel.rootGoal.awreqs)]
 			[if(awreqs.strategies->size() > 0 or awreqs.resolution->size() > 0)]
-			<awreqs xsi:type="[aGoalModel.modelName/]:[awreqs.name/]" [awreqs.getAllParameters()/]>
+			<awreqs xsi:type="goremodel:[awreqs.name/]" [awreqs.getAllParameters()/]>
 				[for(resolution : ResolutionCondition | awreqs.resolution)]
-				<condition xsi:type="it.unitn.disi.zanshin.model:[resolution.name/]" [resolution.getAllParameters()/]/>
+				<condition xsi:type="ecamodel:[resolution.name/]" [resolution.getAllParameters()/]/>
 				[/for]
 				[for(strategies : AdaptationStrategy | awreqs.strategies)]
 				[if(strategies.applicabilities->size() > 0)]
-				<strategies xsi:type="it.unitn.disi.zanshin.model:[strategies.name/]" [strategies.getAllParameters()/]>
+				<strategies xsi:type="ecamodel:[strategies.name/]" [strategies.getAllParameters()/]>
 					[for(applicabilities : ApplicabilityCondition | strategies.applicabilities)]
-					<condition xsi:type="it.unitn.disi.zanshin.model:[applicabilities.name/]"/>
+					<condition xsi:type="ecamodel:[applicabilities.name/]"/>
 					[/for]
 				</strategies>
 				[else]
-					<strategies xsi:type="it.unitn.disi.zanshin.model:[strategies.name/]" [strategies.getAllParameters()/]/>
+					<strategies xsi:type="ecamodel:[strategies.name/]" [strategies.getAllParameters()/]/>
 				[/if]
 				[/for]
 			</awreqs>
 			[else]
-			<awreqs xsi:type="[aGoalModel.modelName/]:[awreqs.name/]" [awreqs.getAllParameters()/]/>
+			<awreqs xsi:type="goremodel:[awreqs.name/]" [awreqs.getAllParameters()/]/>
 			[/if]
 		[/for]
 		[for(assumptions : DomainAssumption | aGoalModel.rootGoal.assumptions)]
-			<assumptions xsi:type="[aGoalModel.modelName/]:[assumptions.name/]"/>
+			<assumptions xsi:type="goremodel:[assumptions.name/]"/>
 	[/for]
 	</rootGoal>
 	[if(aGoalModel.configuration <> null)]
 	[for(conf : Configuration | aGoalModel.configuration)]
 	<configuration>
 		[for(param : Parameter | conf.parameters)]
-		<parameters xsi:type="[aGoalModel.modelName/]:[param.name/]" [param.getAllParameters()/]/>
+		<parameters xsi:type="goremodel:[param.name/]" [param.getAllParameters()/]/>
 		[/for]
 	</configuration>
 	[/for]
@@ -53,7 +53,7 @@
 	ERROR: Rootgoal is not defined.
 [/if]
 
-<[aGoalModel.modelName.toLower().replaceAll(' ', '')/]:[aGoalModel.modelName.toLower().toUpperFirst().replaceAll(' ', '')/]GoalModel/>
+</goremodel:[aGoalModel.getModelShortName().toUpperFirst()/]GoalModel>
 
 [/file]
 [/template]

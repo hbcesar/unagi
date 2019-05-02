@@ -6,18 +6,21 @@
 [file (aGoalModel.modelName.replaceAll(' ', '').toLower().concat('.ecore'), false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="[aGoalModel.modelName.toLower().toUpperFirst()/]" nsURI="https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/scheduler/scheduler.ecore"
-    nsPrefix="[aGoalModel.modelName.toLower()/]">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="[aGoalModel.getModelShortName().toUpperFirst()/]" nsURI="https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/scheduler/scheduler.ecore"
+    nsPrefix="goremodel">
+	<eClassifiers xsi:type="ecore:EClass" name="[aGoalModel.getModelShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//GoalModel"/>
 	[for(ref : GOREElement | aGoalModel.refinements)]
 	[ref.generateID(aGoalModel)/]
 	[if(ref.oclIsKindOf(AwReq))]
-		[for(str : AdaptationStrategy | ref.oclAsType(AwReq).strategies)]
+[comment]		[for(str : AdaptationStrategy | ref.oclAsType(AwReq).strategies)]
 			[str.generateID(aGoalModel)/]
 			[for(app : ApplicabilityCondition | str.applicabilities)]
 				[app.generateID(aGoalModel)/]
 			[/for]
-		[/for]
+		[/for][/comment]
+		[if(ref.oclAsType(AwReq).resolution->size() > 0)]
 		[ref.oclAsType(AwReq).resolution.generateID(aGoalModel)/]
+		[/if]
 	[/if]
 	<eClassifiers xsi:type="ecore:EClass" name="[ref.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//[ref.getType()/]"/>
 	[/for]
@@ -28,11 +31,11 @@
 	[if(aGoalModel.configuration <> null)]
 	[for(conf : Configuration | aGoalModel.configuration)]
 	<eClassifiers xsi:type="ecore:EClass" name="[conf.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//Parameter"/>	
-	[for(param : Parameter | conf.parameters)]
-	[param.generateID(aGoalModel)/]
-	[param.getAllParameters()/]
-	<eClassifiers xsi:type="ecore:EClass" name="[conf.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//Parameter"/>
-	[/for]
+[comment]	[for(param : Parameter | conf.parameters)][/comment]
+[comment]	[param.generateID(aGoalModel)/][/comment]
+[comment]	[param.getAllParameters()/][/comment]
+[comment]	<eClassifiers xsi:type="ecore:EClass" name="[conf.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//Parameter"/>[/comment]
+[comment]	[/for][/comment]
 	[/for]
 	[/if]
 	[for(relation : DifferentialRelation | aGoalModel.relations)]
