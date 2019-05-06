@@ -8,8 +8,8 @@
       </eAnnotations>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rootGoal" eType="#//Hardgoal"
-        eOpposite="#//Hardgoal/goalModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rootGoal" eType="#//HardGoal"
+        eOpposite="#//HardGoal/goalModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="refinements" upperBound="-1"
         eType="#//GOREElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domainassumption" upperBound="-1"
@@ -25,7 +25,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="internalIDCounter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
         defaultValueLiteral="0"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GOREElement">
+  <eClassifiers xsi:type="ecore:EClass" name="GOREElement" eSuperTypes="LTL.ecore#//OclAny">
     <eOperations name="getShortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return this.name.replaceAll(&quot; &quot;, &quot;_&quot;);"/>
@@ -67,7 +67,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="PerformativeRequirement" eSuperTypes="#//GoalOrientedRequirement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Hardgoal" eSuperTypes="#//PerformativeRequirement">
+  <eClassifiers xsi:type="ecore:EClass" name="HardGoal" eSuperTypes="#//PerformativeRequirement">
     <eOperations name="getShortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return &quot;HG_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
