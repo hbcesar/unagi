@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/gore/src" modelPluginID="gore" modelName="Unagi"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>gore.ecore</foreignModel>
+  <foreignModel>gorezanshin.ecore</foreignModel>
+  <genPackages prefix="Gore" disposableProviderFactory="true" ecorePackage="gore.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gore.ecore#//GOREElementState">
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//GOREElementState/UNDEFINED"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//GOREElementState/STARTED"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//GOREElementState/SUCCEEDED"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//GOREElementState/FAILED"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//GOREElementState/CANCELED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gore.ecore#//DifferentialRelationOperator">
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//DifferentialRelationOperator/GREATER_THAN"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//DifferentialRelationOperator/FEWER_THAN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gore.ecore#//ParameterMetric">
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//ParameterMetric/ENUMERATED"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//ParameterMetric/INTEGER"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//ParameterMetric/REAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gore.ecore#//ParameterType">
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//ParameterType/VARIATION_POINT"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//ParameterType/ENUMERATED_CONTROL_VARIABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//ParameterType/NUMERIC_CONTROL_VARIABLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gore.ecore#//RefinementType">
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//RefinementType/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//RefinementType/OR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gore.ecore#//AgregationLevel">
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//AgregationLevel/INSTANCE"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//AgregationLevel/CLASS"/>
+      <genEnumLiterals ecoreEnumLiteral="gore.ecore#//AgregationLevel/BOTH"/>
+    </genEnums>
+    <genClasses ecoreClass="gore.ecore#//GoalModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//GoalModel/modelName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//GoalModel/rootGoal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gore.ecore#//GoalModel/domainassumption"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gore.ecore#//GoalModel/actors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gore.ecore#//GoalModel/configuration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//GoalModel/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gore.ecore#//GoalModel/relations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//GoalModel/internalIDCounter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gore.ecore#//GoalModel/refinements"/>
+      <genOperations ecoreOperation="gore.ecore#//GoalModel/getModelShortName" body="return this.modelName.replaceAll(&quot; &quot;, &quot;_&quot;).toLowerCase();"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//GOREElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//GOREElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//GOREElement/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//GOREElement/state"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//GOREElement/awreqs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//GOREElement/internalID"/>
+      <genOperations ecoreOperation="gore.ecore#//GOREElement/getShortName" body="return this.name.replaceAll(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//GOREElement/getType" body="return &quot;GOREElement&quot;;"/>
+      <genOperations ecoreOperation="gore.ecore#//GOREElement/getAllParameters" body="return &quot;&quot;;"/>
+      <genOperations ecoreOperation="gore.ecore#//GOREElement/generateID" body="this.internalID = gm.getInternalIDCounter();&#xA;gm.setInternalIDCounter(this.internalID + 1);">
+        <genParameters ecoreParameter="gore.ecore#//GOREElement/generateID/gm"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//GoalOrientedRequirement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//GoalOrientedRequirement/refinementType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//GoalOrientedRequirement/assumptions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//GoalOrientedRequirement/refinements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//GoalOrientedRequirement/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//PerformativeRequirement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//PerformativeRequirement/startTime"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//HardGoal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gore.ecore#//HardGoal/task"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//HardGoal/goalModel"/>
+      <genOperations ecoreOperation="gore.ecore#//HardGoal/getShortName" body="return &quot;HG_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//HardGoal/getType" body="return &quot;HardGoal&quot;;"/>
+      <genOperations ecoreOperation="gore.ecore#//HardGoal/getAllParameters" body="return &quot;refinementType=\&quot;&quot; + this.getRefinementType().toString() + &quot;\&quot;&quot;;"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//Softgoal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//Softgoal/constraints"/>
+      <genOperations ecoreOperation="gore.ecore#//Softgoal/getShortName" body="return &quot;SG_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//Softgoal/getType" body="return &quot;Softgoal&quot;;"/>
+      <genOperations ecoreOperation="gore.ecore#//Softgoal/getAllParameters" body="return &quot;refinementType=\&quot;&quot; + this.getRefinementType().toString() + &quot;\&quot;&quot;;"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//Task">
+      <genOperations ecoreOperation="gore.ecore#//Task/getShortName" body="return &quot;T_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//Task/getType" body="return &quot;Task&quot;;"/>
+      <genOperations ecoreOperation="gore.ecore#//Task/getAllParameters" body="return &quot;refinementType=\&quot;&quot; + this.getRefinementType().toString() + &quot;\&quot;&quot;;"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//AwReq">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//AwReq/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gore.ecore#//AwReq/strategies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gore.ecore#//AwReq/resolution"/>
+      <genOperations ecoreOperation="gore.ecore#//AwReq/getShortName" body="return &quot;AR_&quot; + this.name.replaceAll(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//AwReq/getType" body="return &quot;AwReq&quot;;"/>
+      <genOperations ecoreOperation="gore.ecore#//AwReq/getAllParameters" body="return &quot;&quot;;"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//QualityConstraint">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//QualityConstraint/softgoal"/>
+      <genOperations ecoreOperation="gore.ecore#//QualityConstraint/getShortName"
+          body="return &quot;QC_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//QualityConstraint/getType" body="return &quot;QualityConstraint&quot;;"/>
+      <genOperations ecoreOperation="gore.ecore#//QualityConstraint/getAllParameters"
+          body="return &quot;&quot;;"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//DomainAssumption">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//DomainAssumption/parent"/>
+      <genOperations ecoreOperation="gore.ecore#//DomainAssumption/getShortName" body="return &quot;DA_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//DomainAssumption/getType" body="return &quot;DomainAssumption&quot;;"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//Actor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//Actor/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//Actor/internalID"/>
+      <genOperations ecoreOperation="gore.ecore#//Actor/getShortName" body="return &quot;A_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//Actor/getType" body="return &quot;Actor&quot;;"/>
+      <genOperations ecoreOperation="gore.ecore#//Actor/generateID">
+        <genParameters ecoreParameter="gore.ecore#//Actor/generateID/gm">
+          <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="body" value="this.internalID = gm.getInternalIDCounter();&#xA;gm.setInternalIDCounter(this.internalID + 1);"/>
+          </genAnnotations>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//Configuration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//Configuration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gore.ecore#//Configuration/parameters"/>
+      <genOperations ecoreOperation="gore.ecore#//Configuration/getShortName" body="return &quot;Cv_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//Configuration/getType" body="return &quot;Parameter&quot;;"/>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//DifferentialRelation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//DifferentialRelation/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//DifferentialRelation/indicator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//DifferentialRelation/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//DifferentialRelation/lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//DifferentialRelation/upperBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//DifferentialRelation/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//DifferentialRelation/DifferentialRelationOperator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//DifferentialRelation/internalID"/>
+      <genOperations ecoreOperation="gore.ecore#//DifferentialRelation/getShortName"
+          body="return &quot;DR_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//DifferentialRelation/getType" body="return &quot;DiferrentialRelation&quot;;"/>
+      <genOperations ecoreOperation="gore.ecore#//DifferentialRelation/getAllParameters"
+          body="String str = &quot;&quot;;&#xA;&#xA;str = &quot;indicator=\&quot;&quot; + this.getIndicator().getInternalID() + &quot;\&quot;&quot;;&#xA;str += &quot; parameter=\&quot;&quot; + this.getParameter().getInternalID() + &quot;\&quot;&quot;;&#xA;str += &quot; lowerBound=\&quot;&quot; + this.getLowerBound().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; upperBound=\&quot;&quot; + this.getUpperBound().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; value=\&quot;&quot; + this.getValue() + &quot;\&quot;&quot;;&#xA;str += &quot; differentialRelationOperator=\&quot;&quot; + this.getDifferentialRelationOperator().toString() + &quot;\&quot;&quot;;&#xA;&#xA;return str;"/>
+      <genOperations ecoreOperation="gore.ecore#//DifferentialRelation/generateID">
+        <genParameters ecoreParameter="gore.ecore#//DifferentialRelation/generateID/gm">
+          <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="body" value="this.internalID = gm.getInternalIDCounter();&#xA;gm.setInternalIDCounter(this.internalID + 1);"/>
+          </genAnnotations>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gore.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//Parameter/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gore.ecore#//Parameter/configuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//Parameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//Parameter/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//Parameter/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//Parameter/metric"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gore.ecore#//Parameter/internalID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gore.ecore#//Parameter/indicator"/>
+      <genOperations ecoreOperation="gore.ecore#//Parameter/getShortName" body="return &quot;Vp_&quot; + this.name.replace(&quot; &quot;, &quot;_&quot;);"/>
+      <genOperations ecoreOperation="gore.ecore#//Parameter/getAllParameters" body="String str = &quot;&quot;;&#xA;&#xA;str = &quot;type=\&quot;&quot; + this.getType().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; unit=\&quot;&quot; + this.getUnit().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; value=\&quot;&quot; + this.getValue().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; metric=\&quot;&quot; + this.getMetric().toString() + &quot;\&quot;&quot;;&#xA;&#xA;return str;"/>
+      <genOperations ecoreOperation="gore.ecore#//Parameter/generateID">
+        <genParameters ecoreParameter="gore.ecore#//Parameter/generateID/gm">
+          <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="body" value="this.internalID = gm.getInternalIDCounter();&#xA;gm.setInternalIDCounter(this.internalID + 1);"/>
+          </genAnnotations>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Zanshingore" disposableProviderFactory="true" ecorePackage="gorezanshin.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gorezanshin.ecore#//AggregationLevel">
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//AggregationLevel/INSTANCE"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//AggregationLevel/CLASS"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//AggregationLevel/BOTH"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gorezanshin.ecore#//GOREElementState">
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//GOREElementState/UNDEFINED"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//GOREElementState/STARTED"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//GOREElementState/SUCCEEDED"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//GOREElementState/FAILED"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//GOREElementState/CANCELED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gorezanshin.ecore#//DifferentialRelationOperator">
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//DifferentialRelationOperator/GREATER_THAN"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//DifferentialRelationOperator/FEWER_THAN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gorezanshin.ecore#//MonitorableMethod">
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//MonitorableMethod/START"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//MonitorableMethod/END"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//MonitorableMethod/SUCCESS"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//MonitorableMethod/FAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//MonitorableMethod/CANCEL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gorezanshin.ecore#//ParameterMetric">
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//ParameterMetric/ENUMERATED"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//ParameterMetric/INTEGER"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//ParameterMetric/REAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gorezanshin.ecore#//ParameterType">
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//ParameterType/VARIATION_POINT"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//ParameterType/ENUMERATED_CONTROL_VARIABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//ParameterType/NUMERIC_CONTROL_VARIABLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gorezanshin.ecore#//RefinementType">
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//RefinementType/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="gorezanshin.ecore#//RefinementType/OR"/>
+    </genEnums>
+    <genClasses ecoreClass="gorezanshin.ecore#//GoalModel">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//GoalModel/internalId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//GoalModel/actors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//GoalModel/rootGoal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//GoalModel/configuration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//GoalModel/relations"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GoalModel/getId" body="if (internalId == null) internalId = System.currentTimeMillis();&#xA;return internalId;"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GoalModel/filterRelations"
+          body="// Returns a list of relations associated with the given indicator.&#xA;EList&lt;DifferentialRelation> filteredRelations = new org.eclipse.emf.common.util.BasicEList&lt;>();&#xA;if (indicator != null)&#xA;&#x9;for (DifferentialRelation relation : relations) {&#xA;&#x9;&#x9;AwReq relationIndicator = relation.getIndicator(); &#xA;&#x9;&#x9;if ((relationIndicator != null) &amp;&amp; (relationIndicator.eClass().equals(indicator.eClass())))&#xA;&#x9;&#x9;&#x9;filteredRelations.add(relation);&#xA;&#x9;}&#xA;return filteredRelations;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//GoalModel/filterRelations/indicator"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GoalModel/filterRelations.1"
+          body="// Returns a list of relations associated with the given parameter.&#xA;EList&lt;DifferentialRelation> filteredRelations = new org.eclipse.emf.common.util.BasicEList&lt;>();&#xA;if (parameter != null)&#xA;&#x9;for (DifferentialRelation relation : relations) {&#xA;&#x9;&#x9;Parameter relationParameter = relation.getParameter(); &#xA;&#x9;&#x9;if ((relationParameter != null) &amp;&amp; (relationParameter.eClass().equals(parameter.eClass())))&#xA;&#x9;&#x9;&#x9;filteredRelations.add(relation);&#xA;&#x9;}&#xA;return filteredRelations;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//GoalModel/filterRelations.1/parameter"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GoalModel/filterRelations.2"
+          body="// Returns a list of relations associated with the given indicator and the given parameter.&#xA;EList&lt;DifferentialRelation> filteredRelations = new org.eclipse.emf.common.util.BasicEList&lt;>();&#xA;if ((indicator != null) &amp;&amp; (parameter != null))&#xA;&#x9;for (DifferentialRelation relation : relations) {&#xA;&#x9;&#x9;AwReq relationIndicator = relation.getIndicator();&#xA;&#x9;&#x9;Parameter relationParameter = relation.getParameter();&#xA;&#x9;&#x9;if ((relationIndicator != null) &amp;&amp; (relationIndicator.eClass().equals(indicator.eClass())) &amp;&amp; (relationParameter != null) &amp;&amp; (relationParameter.eClass().equals(parameter.eClass())))&#xA;&#x9;&#x9;&#x9;filteredRelations.add(relation);&#xA;&#x9;}&#xA;return filteredRelations;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//GoalModel/filterRelations.2/indicator"/>
+        <genParameters ecoreParameter="gorezanshin.ecore#//GoalModel/filterRelations.2/parameter"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GoalModel/filterRelations.3"
+          body="// Filters the relations by indicator and parameter.&#xA;EList&lt;DifferentialRelation> filteredRelations = filterRelations(indicator, parameter);&#xA;&#xA;// Creates a fake parameter for the value comparison.&#xA;it.unitn.disi.zanshin.model.gore.Parameter param = parameter.createCopy();&#xA;param.setValue(value);&#xA;&#xA;// Looks for a relation in which value is within bounds. Returns the first one found.&#xA;for (DifferentialRelation relation : filteredRelations) &#xA;&#x9;if (param.withinBoundsOf(relation))&#xA;&#x9;&#x9;return relation;&#xA;&#xA;// If not found, return null.&#xA;return null;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//GoalModel/filterRelations.3/indicator"/>
+        <genParameters ecoreParameter="gorezanshin.ecore#//GoalModel/filterRelations.3/parameter"/>
+        <genParameters ecoreParameter="gorezanshin.ecore#//GoalModel/filterRelations.3/value"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//GOREElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//GOREElement/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//GOREElement/state"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//GOREElement/awreqs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//GOREElement/internalID"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/start" body="it.unitn.disi.zanshin.core.CoreUtils.log.debug(&quot;Requirement started: &quot; + eClass().getName() + &quot; (&quot; + this + &quot;)&quot;); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$&#xD;&#xA;setState(it.unitn.disi.zanshin.model.gore.GOREElementState.STARTED);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// If the monitoring service is active, warn it that this requirement has been started.&#xD;&#xA;it.unitn.disi.zanshin.services.IMonitoringService monitoringService = it.unitn.disi.zanshin.core.Activator.getMonitoringService();&#xD;&#xA;if (monitoringService != null)&#xD;&#xA;&#x9;monitoringService.monitorMethodCall(this, it.unitn.disi.zanshin.model.gore.MonitorableMethod.START);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// Propagate the start to the parent.&#xD;&#xA;it.unitn.disi.zanshin.model.gore.GOREElement parent = getRefinementSource();&#xD;&#xA;if ((parent != null) &amp;&amp; (((GOREElement) parent).getState() == it.unitn.disi.zanshin.model.gore.GOREElementState.UNDEFINED))&#xD;&#xA;&#x9;((GOREElement) parent).start();"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/end" body="it.unitn.disi.zanshin.core.CoreUtils.log.debug(&quot;Requirement ended: &quot; + eClass().getName() + &quot; (&quot; + this + &quot;)&quot;); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;// If the monitoring service is active, warn it that this requirement has ended.&#xD;&#xA;it.unitn.disi.zanshin.services.IMonitoringService monitoringService = it.unitn.disi.zanshin.core.Activator.getMonitoringService();&#xD;&#xA;if (monitoringService != null)&#xD;&#xA;&#x9;monitoringService.monitorMethodCall(this, it.unitn.disi.zanshin.model.gore.MonitorableMethod.END);"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/success" body="it.unitn.disi.zanshin.core.CoreUtils.log.debug(&quot;Requirement succeeded: &quot; + eClass().getName() + &quot; (&quot; + this + &quot;)&quot;); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$&#xD;&#xA;setState(it.unitn.disi.zanshin.model.gore.GOREElementState.SUCCEEDED);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// If the monitoring service is active, warn it that this requirement has been successful.&#xD;&#xA;it.unitn.disi.zanshin.services.IMonitoringService monitoringService = it.unitn.disi.zanshin.core.Activator.getMonitoringService();&#xD;&#xA;if (monitoringService != null)&#xD;&#xA;&#x9;monitoringService.monitorMethodCall(this, it.unitn.disi.zanshin.model.gore.MonitorableMethod.SUCCESS);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// If the requirement is successful, then it has also ended.&#xD;&#xA;end();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// Propagate the success to the parent, depending on the type of refinement.&#xD;&#xA;it.unitn.disi.zanshin.model.gore.GOREElement parent = getRefinementSource();&#xD;&#xA;if ((parent != null) &amp;&amp; (parent instanceof it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement)) {&#xD;&#xA;&#x9;it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement p = (it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) parent;&#xD;&#xA;&#x9;if (p.getRefinementType() == it.unitn.disi.zanshin.model.gore.RefinementType.OR) ((GOREElement) parent).success();&#xD;&#xA;&#x9;else ((GOREElement)parent).checkState();&#xD;&#xA;}"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/fail" body="it.unitn.disi.zanshin.core.CoreUtils.log.debug(&quot;Requirement failed: &quot; + eClass().getName() + &quot; (&quot; + this + &quot;)&quot;); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$&#xD;&#xA;setState(it.unitn.disi.zanshin.model.gore.GOREElementState.FAILED);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// If the monitoring service is active, warn it that this requirement has failed.&#xD;&#xA;it.unitn.disi.zanshin.services.IMonitoringService monitoringService = it.unitn.disi.zanshin.core.Activator.getMonitoringService();&#xD;&#xA;if (monitoringService != null)&#xD;&#xA;&#x9;monitoringService.monitorMethodCall(this, it.unitn.disi.zanshin.model.gore.MonitorableMethod.FAIL);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// If the requirement failed, then it has also ended.&#xD;&#xA;end();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// Propagate the failure to the parent, depending on the type of refinement.&#xD;&#xA;it.unitn.disi.zanshin.model.gore.GOREElement parent = getRefinementSource();&#xD;&#xA;if ((parent != null) &amp;&amp; (parent instanceof it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement)) {&#xD;&#xA;&#x9;it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement p = (it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) parent;&#xD;&#xA;&#x9;if (p.getRefinementType() == it.unitn.disi.zanshin.model.gore.RefinementType.AND) ((GOREElement) parent).fail();&#xD;&#xA;&#x9;else ((GOREElement)parent).checkState();&#xD;&#xA;}"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/checkState" body="// Counts the number of children in each state and the number of definable children.&#xA;org.eclipse.emf.common.util.EList&lt;Integer> stateCount = getChildrenStateCount();&#xA;int defChildrenCount = stateCount.get(stateCount.size() - 1);&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;// For AND-refined requirements, checks if all children have SUCCEEDED.&#xA;if (this instanceof it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) {&#xA;&#x9;it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement p = (it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) this;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;if(p.getRefinementType() == it.unitn.disi.zanshin.model.gore.RefinementType.AND) {&#xA;&#x9;&#x9;if (stateCount.get(it.unitn.disi.zanshin.model.gore.GOREElementState.SUCCEEDED_VALUE) == defChildrenCount) success();&#xA;&#x9;}&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;// For OR-refined requirements, checks if all children have FAILED.&#xA;&#x9;else {&#xA;&#x9;&#x9;if (stateCount.get(it.unitn.disi.zanshin.model.gore.GOREElementState.FAILED_VALUE) == defChildrenCount) fail();&#xA;&#x9;}&#xA;} "/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/replaceWith"
+          body="// Cannot replace a requirement instance with null.&#xD;&#xA;if (newRequirement == null) {&#xD;&#xA;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.error(&quot;Cannot replace a requirement instance with null. A proper requirement instance should be provided.&quot;); //$NON-NLS-1$&#xD;&#xA;&#x9;&#x9;&#x9;throw new IllegalArgumentException();&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// Can only replace requirements of the same class.&#xD;&#xA;if (! newRequirement.eClass().equals(eClass())) {&#xD;&#xA;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.error(&quot;Cannot replace a requirement instance of class {0} with one of class {1}. Instances should be of the same class.&quot;, eClass().getName(), newRequirement.eClass().getName());//$NON-NLS-1$&#xD;&#xA;&#x9;throw new IllegalArgumentException();&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// Changes the parent-child relationship (if there's no parent, we're setting null over null, so no harm). When&#xD;&#xA;// elements have many-to-one bilateral associations, only the &quot;one&quot; side is manipulated. This is on purpose, as EMF&#xD;&#xA;// generated code will handle the inverse association automatically.&#xD;&#xA;GOREElement parent = getRefinementSource();&#xD;&#xA;setRefinementSource(null);&#xD;&#xA;newRequirement.setRefinementSource(parent);&#xD;&#xA;it.unitn.disi.zanshin.core.CoreUtils.log.debug(&quot;Replacing requirement instances of class {0} ({1} -> {2})&quot;, eClass().getName(), this, newRequirement); //$NON-NLS-1$&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// After a piece of the requirements tree gets replaced by new instances (with possible different states), check if&#xD;&#xA;// the ancestors should also have their state reset. For instance, if a failed instance is replaced by a non-failing&#xD;&#xA;// one in an AND-refinement, the parent should change from Failed to Started or Undefined. Navigate up the tree.&#xD;&#xA;while (parent != null) {&#xD;&#xA;&#x9;// This procedure only makes sense in Goal Oriented Requirements.&#xD;&#xA;&#x9;if(parent instanceof it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement){&#xD;&#xA;&#x9;&#x9;it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement req = (it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) parent;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;// Counts the number of children in each state and the number of definable children.&#xD;&#xA;&#x9;&#x9;EList&lt;Integer> stateCount = req.getChildrenStateCount();&#xD;&#xA;&#x9;&#x9;//int defChildrenCount = stateCount.get(stateCount.size() - 1);&#xD;&#xA;&#x9;&#x9;int defChildrenCount = getChildren().size();&#xD;&#xA;&#x9;&#x9;boolean doReset = false;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;// Checks the type of the requirement.&#xD;&#xA;&#x9;&#x9;switch (req.getRefinementType()) {&#xD;&#xA;&#x9;&#x9;case AND:&#xD;&#xA;&#x9;&#x9;&#x9;// For failed AND-refined requirements, if none of its children failed, reset its state.&#xD;&#xA;&#x9;&#x9;&#x9;doReset = (req.getState() == it.unitn.disi.zanshin.model.gore.GOREElementState.FAILED) &amp;&amp; (stateCount.get(it.unitn.disi.zanshin.model.gore.GOREElementState.FAILED_VALUE) == 0);&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;case OR:&#xD;&#xA;&#x9;&#x9;&#x9;// For failed OR-refined requirements, if at least one of its children didn't fail, reset its state.&#xD;&#xA;&#x9;&#x9;&#x9;doReset = (req.getState() == it.unitn.disi.zanshin.model.gore.GOREElementState.FAILED) &amp;&amp; (stateCount.get(it.unitn.disi.zanshin.model.gore.GOREElementState.FAILED_VALUE) &lt; defChildrenCount);&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;// Checks if a reset is in order.&#xD;&#xA;&#x9;&#x9;if (doReset) {&#xD;&#xA;&#x9;&#x9;&#x9;// If no children have yet started, set the requirement also as Undefined.&#xD;&#xA;&#x9;&#x9;&#x9;if (stateCount.get(it.unitn.disi.zanshin.model.gore.GOREElementState.UNDEFINED_VALUE) == defChildrenCount)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;req.setState(it.unitn.disi.zanshin.model.gore.GOREElementState.UNDEFINED);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;// Otherwise, if at least one child has started, set it also as Started.&#xD;&#xA;&#x9;&#x9;&#x9;else req.setState(it.unitn.disi.zanshin.model.gore.GOREElementState.STARTED);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;// Log what has just happened.&#xD;&#xA;&#x9;&#x9;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.debug(&quot;The status of {0} has been reset to {1}&quot;, req.eClass().getName(), req.getState()); //$NON-NLS-1$&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;} &#xD;&#xA;&#x9;&#xD;&#xA;&#x9;// Next ancestor.&#xD;&#xA;&#x9;parent = parent.getRefinementSource();&#xD;&#xA;}">
+        <genParameters ecoreParameter="gorezanshin.ecore#//GOREElement/replaceWith/newRequirement"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/findGoalModel"
+          body="GoalModel model = null;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// If it's the root goal, return the goal model.&#xD;&#xA;if (this instanceof it.unitn.disi.zanshin.model.gore.HardGoal)&#xD;&#xA;&#x9;&#x9;&#x9;model = ((it.unitn.disi.zanshin.model.gore.HardGoal) this).getGoalModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// If the model is not found in the root goal, move up the requirement tree looking for the root goal.&#xD;&#xA;if ((model == null) &amp;&amp; (getRefinementSource() != null))&#xD;&#xA;&#x9;&#x9;&#x9;model = getRefinementSource().findGoalModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;// Returns the found model, or null if no model has been found.&#xD;&#xA;return model;"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/getChildren"
+          body="EList&lt;GOREElement> children = new org.eclipse.emf.common.util.BasicEList&lt;>();&#xD;&#xA;EList&lt;AwReq> awreqs = this.getAwreqs();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;for(GOREElement child : awreqs){&#xD;&#xA;&#x9;children.add(child);&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;return children;"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/getChildrenStateCount"
+          body="// Counts the number of children in each state and the number of children.&#xD;&#xA;int[] stateCount = new int[it.unitn.disi.zanshin.model.gore.GOREElementState.VALUES.size()];&#xD;&#xA; &#xD;&#xA;for (it.unitn.disi.zanshin.model.gore.GOREElement child : getChildren()) {&#xD;&#xA;&#x9;stateCount[((GOREElement) child).getState().getValue()]++;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;// Converts to EList so we can return&#xD;&#xA;EList&lt;Integer> stateCountList = new org.eclipse.emf.common.util.BasicEList&lt;>();&#xD;&#xA;for (int count : stateCount)&#xD;&#xA;&#x9;stateCountList.add(count);&#xD;&#xA;&#xD;&#xA;return stateCountList;"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/getRefinementSource"
+          body="if(this instanceof it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) {&#xD;&#xA;&#x9;it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement g = (it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) this;&#xD;&#xA;&#x9;return g.getParent();&#xD;&#xA;} else if (this instanceof it.unitn.disi.zanshin.model.gore.AwReq) {&#xD;&#xA;&#x9;it.unitn.disi.zanshin.model.gore.AwReq ar = (it.unitn.disi.zanshin.model.gore.AwReq) this;&#xD;&#xA;&#x9;return ar.getTarget();&#xD;&#xA;} else if (this instanceof it.unitn.disi.zanshin.model.gore.QualityConstraint) {&#xD;&#xA;&#x9;it.unitn.disi.zanshin.model.gore.QualityConstraint qc = (it.unitn.disi.zanshin.model.gore.QualityConstraint) this;&#xD;&#xA;&#x9;return qc.getTarget();&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;return null;"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GOREElement/setRefinementSource"
+          body="if(this instanceof it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) {&#xA;&#x9;it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement g = (it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) this;&#xA;&#x9;g.setParent((it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) parent);&#xA;} else if (this instanceof it.unitn.disi.zanshin.model.gore.AwReq) {&#xA;&#x9;it.unitn.disi.zanshin.model.gore.AwReq ar = (it.unitn.disi.zanshin.model.gore.AwReq) this;&#xA;&#x9;ar.setTarget(parent);&#xA;} else if (this instanceof it.unitn.disi.zanshin.model.gore.QualityConstraint) {&#xA;&#x9;it.unitn.disi.zanshin.model.gore.QualityConstraint qc = (it.unitn.disi.zanshin.model.gore.QualityConstraint) this;&#xA;&#x9;qc.setTarget((it.unitn.disi.zanshin.model.gore.Softgoal) parent);&#xA;}">
+        <genParameters ecoreParameter="gorezanshin.ecore#//GOREElement/setRefinementSource/parent"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//GoalOrientedRequirement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//GoalOrientedRequirement/refinementType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//GoalOrientedRequirement/assumptions"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gorezanshin.ecore#//GoalOrientedRequirement/parent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//GoalOrientedRequirement/refinements"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//GoalOrientedRequirement/getChildren"/>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//PerformativeRequirement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//PerformativeRequirement/startTime"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//PerformativeRequirement/cancel"
+          body="// Only process the cancellation if the requirement has not yet been canceled.&#xD;&#xA;if (getState() != it.unitn.disi.zanshin.model.gore.GOREElementState.CANCELED) {&#xD;&#xA;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.debug(&quot;Requirement canceled: &quot; + eClass().getName() + &quot; (&quot; + this + &quot;)&quot;); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$&#xD;&#xA;&#x9;setState(it.unitn.disi.zanshin.model.gore.GOREElementState.CANCELED);&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;// If the monitoring service is active, warn it that this requirement has been canceled.&#xD;&#xA;&#x9;it.unitn.disi.zanshin.services.IMonitoringService monitoringService = it.unitn.disi.zanshin.core.Activator.getMonitoringService();&#xD;&#xA;&#x9;if (monitoringService != null)&#xD;&#xA;&#x9;&#x9;monitoringService.monitorMethodCall(this, it.unitn.disi.zanshin.model.gore.MonitorableMethod.CANCEL);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;// If the requirement is canceled, then it has also ended.&#xD;&#xA;&#x9;end();&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;// Propagate the cancellation to the parent, depending if its definable/performative, and/or-refined.&#xD;&#xA;&#x9;//TODO: verificar propagacao pra outros tipos de requisito&#xD;&#xA;&#x9;it.unitn.disi.zanshin.model.gore.GOREElement parent = getParent();&#xD;&#xA;&#x9;if ((parent != null) &amp;&amp; (parent instanceof it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement)) {&#xD;&#xA;&#x9;&#x9;it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement req = (it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement) parent;&#xD;&#xA;&#x9;&#x9;if (req.getRefinementType() == it.unitn.disi.zanshin.model.gore.RefinementType.OR) parent.checkState();&#xD;&#xA;&#x9;&#x9;else if (parent instanceof PerformativeRequirement) ((PerformativeRequirement) parent).cancel();&#xD;&#xA;&#x9;&#x9;else parent.fail();&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;// Also propagate the cancellation to the children if and-refined and the children are performative.&#xD;&#xA;&#x9;if (getRefinementType() == it.unitn.disi.zanshin.model.gore.RefinementType.AND)&#xD;&#xA;&#x9;&#x9;for (it.unitn.disi.zanshin.model.gore.GOREElement child : getChildren())&#xD;&#xA;&#x9;&#x9;&#x9;if (child instanceof PerformativeRequirement) ((PerformativeRequirement) child).cancel();&#xD;&#xA;}"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//PerformativeRequirement/checkState"
+          body="//Counts the number of children&#xD;&#xA;org.eclipse.emf.common.util.EList&lt;Integer> stateCount = getChildrenStateCount();&#xD;&#xA;int childrenCount = getChildren().size();&#xD;&#xA;&#xD;&#xA;// For AND-refined requirements, checks if all children have SUCCEEDED.&#xD;&#xA;if (getRefinementType() == it.unitn.disi.zanshin.model.gore.RefinementType.AND) {&#xD;&#xA;&#x9;if (stateCount.get(it.unitn.disi.zanshin.model.gore.GOREElementState.SUCCEEDED_VALUE) == childrenCount) success();&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;// For OR-refined requirements, checks if all children have FAILED or have been CANCELED.&#xD;&#xA;else {&#xD;&#xA;&#x9;if (stateCount.get(it.unitn.disi.zanshin.model.gore.GOREElementState.FAILED_VALUE) == childrenCount) fail();&#xD;&#xA;&#x9;else if (stateCount.get(it.unitn.disi.zanshin.model.gore.GOREElementState.CANCELED_VALUE) == childrenCount) cancel();&#xD;&#xA;}"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//PerformativeRequirement/getChildren"
+          body="EList&lt;GOREElement> children = new org.eclipse.emf.common.util.BasicEList&lt;>();&#xD;&#xA;EList&lt;GOREElement> awreqs_da = (EList&lt;GOREElement>) super.getChildren();&#xD;&#xA;EList&lt;it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement> goals_tasks = getRefinements();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;for(GOREElement child : awreqs_da){&#xD;&#xA;&#x9;children.add(child);&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;for(GOREElement child : goals_tasks){&#xD;&#xA;&#x9;children.add(child);&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;return children;"/>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//HardGoal">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gorezanshin.ecore#//HardGoal/goalModel"/>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//Softgoal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//Softgoal/constraints"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Softgoal/getChildren" body="EList&lt;GOREElement> children = new org.eclipse.emf.common.util.BasicEList&lt;>();&#xD;&#xA;EList&lt;GOREElement> awreqs_da = (EList&lt;GOREElement>) super.getChildren();&#xD;&#xA;EList&lt;QualityConstraint> qc = this.getConstraints();&#xD;&#xA;EList&lt;it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement> goals = getRefinements();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;for(GOREElement child : awreqs_da){&#xD;&#xA;&#x9;children.add(child);&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;for(GOREElement child : qc){&#xD;&#xA;&#x9;children.add(child);&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;for(it.unitn.disi.zanshin.model.gore.GoalOrientedRequirement child : goals){&#xD;&#xA;&#x9;children.add((GOREElement) child);&#xD;&#xA;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;return children;"/>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//QualityConstraint">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gorezanshin.ecore#//QualityConstraint/target"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//QualityConstraint/replaceWith"
+          body="// Performs the replacement as a normal requirement first.&#xD;&#xA;super.replaceWith(newRequirement);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;// Then, replace the relationship quality constraints have with softgoals.&#xD;&#xA;it.unitn.disi.zanshin.model.gore.Softgoal softgoal = (it.unitn.disi.zanshin.model.gore.Softgoal) getRefinementSource();&#xD;&#xA;setRefinementSource(null);&#xD;&#xA;((QualityConstraint) newRequirement).setRefinementSource(softgoal);">
+        <genParameters ecoreParameter="gorezanshin.ecore#//QualityConstraint/replaceWith/newRequirement"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//AwReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//AwReq/incrementCoefficient"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gorezanshin.ecore#//AwReq/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//AwReq/strategies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//AwReq/resolution"/>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//DomainAssumption">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gorezanshin.ecore#//DomainAssumption/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//Task"/>
+    <genClasses ecoreClass="gorezanshin.ecore#//Actor">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gorezanshin.ecore#//Actor/goalModel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//Actor/internalID"/>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//Configuration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//Configuration/parameters"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gorezanshin.ecore#//Configuration/goalModel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//Configuration/internalID"/>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//DifferentialRelation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//DifferentialRelation/indicator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gorezanshin.ecore#//DifferentialRelation/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//DifferentialRelation/lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//DifferentialRelation/upperBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//DifferentialRelation/operator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//DifferentialRelation/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//DifferentialRelation/internalID"/>
+    </genClasses>
+    <genClasses ecoreClass="gorezanshin.ecore#//Parameter">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gorezanshin.ecore#//Parameter/configuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//Parameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//Parameter/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//Parameter/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//Parameter/metric"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gorezanshin.ecore#//Parameter/internalID"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/greaterThan" body="Boolean result = null;&#xA;&#xA;// Checks the metric of the parameter to know how to compare.&#xA;try {&#xA;&#x9;switch (metric) {&#xA;&#x9;// FIXME: implement enumerated parameters.&#xA;&#x9;case ENUMERATED:&#xA;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#xA;&#x9;// If the parameter is numeric, parses it and compare as numbers.&#xA;&#x9;case INTEGER:&#xA;&#x9;case REAL:&#xA;&#x9;&#x9;java.math.BigDecimal a = new java.math.BigDecimal(this.value);&#xA;&#x9;&#x9;java.math.BigDecimal b = new java.math.BigDecimal(value);&#xA;&#x9;&#x9;return a.compareTo(b) > 0;&#xA;&#x9;}&#xA;}&#xA;&#xA;// In case there are parsing errors (badly formatted numbers in the model), logs an error and returns null.&#xA;catch (NumberFormatException e) {&#xA;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.error(&quot;Error during string->number conversion, either the parameter value ({0}) or the value to compare ({1}) are not numbers.&quot;, e, this.value, value); //$NON-NLS-1$&#xA;}&#xA;&#xA;return result;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/greaterThan/value"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/fewerThan" body="Boolean result = null;&#xA;&#xA;// Checks the metric of the parameter to know how to compare.&#xA;try {&#xA;&#x9;switch (metric) {&#xA;&#x9;// FIXME: implement enumerated parameters.&#xA;&#x9;case ENUMERATED:&#xA;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#xA;&#x9;// If the parameter is numeric, parses it and compare as numbers.&#xA;&#x9;case INTEGER:&#xA;&#x9;case REAL:&#xA;&#x9;&#x9;java.math.BigDecimal a = new java.math.BigDecimal(this.value);&#xA;&#x9;&#x9;java.math.BigDecimal b = new java.math.BigDecimal(value);&#xA;&#x9;&#x9;return a.compareTo(b) &lt; 0;&#xA;&#x9;}&#xA;}&#xA;&#xA;// In case there are parsing errors (badly formatted numbers in the model), logs an error and returns null.&#xA;catch (NumberFormatException e) {&#xA;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.error(&quot;Error during string->number conversion, either the parameter value ({0}) or the value to compare ({1}) are not numbers.&quot;, e, this.value, value); //$NON-NLS-1$&#xA;}&#xA;&#xA;return result;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/fewerThan/value"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/equalTo" body="Boolean result = null;&#xA;&#xA;// Checks the metric of the parameter to know how to compare.&#xA;try {&#xA;&#x9;switch (metric) {&#xA;&#x9;// FIXME: implement enumerated parameters.&#xA;&#x9;case ENUMERATED:&#xA;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#xA;&#x9;// If the parameter is numeric, parses it and compare as numbers.&#xA;&#x9;case INTEGER:&#xA;&#x9;case REAL:&#xA;&#x9;&#x9;java.math.BigDecimal a = new java.math.BigDecimal(this.value);&#xA;&#x9;&#x9;java.math.BigDecimal b = new java.math.BigDecimal(value);&#xA;&#x9;&#x9;return a.compareTo(b) == 0;&#xA;&#x9;}&#xA;}&#xA;&#xA;// In case there are parsing errors (badly formatted numbers in the model), logs an error and returns null.&#xA;catch (NumberFormatException e) {&#xA;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.error(&quot;Error during string->number conversion, either the parameter value ({0}) or the value to compare ({1}) are not numbers.&quot;, e, this.value, value); //$NON-NLS-1$&#xA;}&#xA;&#xA;return result;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/equalTo/value"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/addedTo" body="String result = null;&#xA;&#xA;// Checks the metric of the parameter to know how to compare.&#xA;try {&#xA;&#x9;switch (metric) {&#xA;&#x9;// FIXME: implement enumerated parameters.&#xA;&#x9;case ENUMERATED:&#xA;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#xA;&#x9;// If the parameter is numeric, parses it and add as numbers.&#xA;&#x9;case INTEGER:&#xA;&#x9;case REAL:&#xA;&#x9;&#x9;java.math.BigDecimal a = new java.math.BigDecimal(this.value);&#xA;&#x9;&#x9;java.math.BigDecimal b = new java.math.BigDecimal(value);&#xA;&#x9;&#x9;return a.add(b).toPlainString();&#xA;&#x9;}&#xA;}&#xA;&#xA;// In case there are parsing errors (badly formatted numbers in the model), logs an error and returns null.&#xA;catch (NumberFormatException e) {&#xA;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.error(&quot;Error during string->number conversion, either the parameter value ({0}) or the value to compare ({1}) are not numbers.&quot;, e, this.value, value); //$NON-NLS-1$&#xA;}&#xA;&#xA;return result;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/addedTo/value"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/multipliedBy" body="String result = null;&#xA;&#xA;// Checks the metric of the parameter to know how to compare.&#xA;try {&#xA;&#x9;switch (metric) {&#xA;&#x9;// FIXME: implement enumerated parameters.&#xA;&#x9;case ENUMERATED:&#xA;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#xA;&#x9;// If the parameter is numeric, parses it and multiply as numbers.&#xA;&#x9;case INTEGER:&#xA;&#x9;case REAL:&#xA;&#x9;&#x9;java.math.BigDecimal a = new java.math.BigDecimal(this.value);&#xA;&#x9;&#x9;java.math.BigDecimal b = new java.math.BigDecimal(value);&#xA;&#x9;&#x9;return a.multiply(b).toPlainString();&#xA;&#x9;}&#xA;}&#xA;&#xA;// In case there are parsing errors (badly formatted numbers in the model), logs an error and returns null.&#xA;catch (NumberFormatException e) {&#xA;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.error(&quot;Error during string->number conversion, either the parameter value ({0}) or the value to compare ({1}) are not numbers.&quot;, e, this.value, value); //$NON-NLS-1$&#xA;}&#xA;&#xA;return result;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/multipliedBy/value"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/subtractedFrom"
+          body="String result = null;&#xA;&#xA;// Checks the metric of the parameter to know how to compare.&#xA;try {&#xA;&#x9;switch (metric) {&#xA;&#x9;// FIXME: implement enumerated parameters.&#xA;&#x9;case ENUMERATED:&#xA;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#xA;&#x9;// If the parameter is numeric, parses it and add as numbers.&#xA;&#x9;case INTEGER:&#xA;&#x9;case REAL:&#xA;&#x9;&#x9;java.math.BigDecimal a = new java.math.BigDecimal(this.value);&#xA;&#x9;&#x9;java.math.BigDecimal b = new java.math.BigDecimal(value);&#xA;&#x9;&#x9;return a.subtract(b).toPlainString();&#xA;&#x9;}&#xA;}&#xA;&#xA;// In case there are parsing errors (badly formatted numbers in the model), logs an error and returns null.&#xA;catch (NumberFormatException e) {&#xA;&#x9;it.unitn.disi.zanshin.core.CoreUtils.log.error(&quot;Error during string->number conversion, either the parameter value ({0}) or the value to compare ({1}) are not numbers.&quot;, e, this.value, value); //$NON-NLS-1$&#xA;}&#xA;&#xA;return result;">
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/subtractedFrom/value"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/withinBoundsOf"
+          body="String lowerBound = relation.getLowerBound();&#xA;String upperBound = relation.getUpperBound();&#xA;&#xA;// Checks for null comparisons.&#xA;Boolean lowerCmp = greaterThan(lowerBound);&#xA;Boolean upperCmp = fewerThan(upperBound);&#xA;if ((lowerBound != null) &amp;&amp; (lowerCmp == null)) return null;&#xA;if ((upperBound != null) &amp;&amp; (upperCmp == null)) return null;&#xA;&#xA;// Does the comparisons, but only if needed. When the bounds are null, they mean infinity.&#xA;return (((lowerBound == null) || lowerCmp) &amp;&amp; ((upperBound == null) || upperCmp));">
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/withinBoundsOf/relation"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/incrementableIn"
+          body="// Creates a fake parameter and increments it by a unit.&#xA;Parameter param = createCopy();&#xA;param.increment(relation, unit);&#xA;&#xA;// Checks if the fake param, i.e., the param incremented by a unit, is still within boundaries.&#xA;return param.withinBoundsOf(relation);">
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/incrementableIn/relation"/>
+      </genOperations>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/createCopy" body="org.eclipse.emf.ecore.util.EcoreUtil.Copier copier = new org.eclipse.emf.ecore.util.EcoreUtil.Copier();&#xA;Parameter copy = (Parameter) copier.copy(this);&#xA;return copy;"/>
+      <genOperations ecoreOperation="gorezanshin.ecore#//Parameter/increment" body="// Obtains the operator from the differential relation to check the increment direction.&#xA;String newValue = null;&#xA;switch (relation.getOperator()) {&#xA;case FEWER_THAN:&#xA;&#x9;newValue = subtractedFrom(value);&#xA;&#x9;break;&#xA;case GREATER_THAN:&#xA;&#x9;newValue = addedTo(value);&#xA;&#x9;break;&#xA;}&#xA;&#xA;// Changes the parameter's value to the new value.&#xA;if (newValue != null)&#xA;&#x9;setValue(newValue);">
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/increment/relation"/>
+        <genParameters ecoreParameter="gorezanshin.ecore#//Parameter/increment/value"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Eca" disposableProviderFactory="true" ecorePackage="eca.ecore#/">
+    <genClasses ecoreClass="eca.ecore#//ResolutionCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//ResolutionCondition/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference eca.ecore#//ResolutionCondition/awreq"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//ResolutionCondition/internalID"/>
+      <genOperations ecoreOperation="eca.ecore#//ResolutionCondition/getAllParameters"
+          body="return &quot;&quot;;"/>
+      <genOperations ecoreOperation="eca.ecore#//ResolutionCondition/generateID">
+        <genParameters ecoreParameter="eca.ecore#//ResolutionCondition/generateID/gm">
+          <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="body" value="this.internalID = gm.getInternalIDCounter();&#xA;gm.setInternalIDCounter(this.internalID + 1);"/>
+          </genAnnotations>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//ApplicabilityCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//ApplicabilityCondition/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference eca.ecore#//ApplicabilityCondition/strategy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//ApplicabilityCondition/internalID"/>
+      <genOperations ecoreOperation="eca.ecore#//ApplicabilityCondition/getAllParameters"
+          body="return &quot;&quot;;"/>
+      <genOperations ecoreOperation="eca.ecore#//ApplicabilityCondition/generateID">
+        <genParameters ecoreParameter="eca.ecore#//ApplicabilityCondition/generateID/gm">
+          <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="body" value="this.internalID = gm.getInternalIDCounter();&#xA;gm.setInternalIDCounter(this.internalID + 1);"/>
+          </genAnnotations>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//AdaptationStrategy">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference eca.ecore#//AdaptationStrategy/awreq"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//AdaptationStrategy/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eca.ecore#//AdaptationStrategy/applicabilities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//AdaptationStrategy/internalID"/>
+      <genOperations ecoreOperation="eca.ecore#//AdaptationStrategy/getAllParameters"
+          body="return &quot;&quot;;"/>
+      <genOperations ecoreOperation="eca.ecore#//AdaptationStrategy/generateID">
+        <genParameters ecoreParameter="eca.ecore#//AdaptationStrategy/generateID/gm">
+          <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="body" value="this.internalID = gm.getInternalIDCounter();&#xA;gm.setInternalIDCounter(this.internalID + 1);"/>
+          </genAnnotations>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//SimpleResolutionCondition"/>
+    <genClasses ecoreClass="eca.ecore#//AndRefinedResolutionCondition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//AndRefinedResolutionCondition/children"/>
+      <genOperations ecoreOperation="eca.ecore#//AndRefinedResolutionCondition/getAllParameters"
+          body="String str = &quot;&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;for(ResolutionCondition chld : this.children){&#xA;&#x9;str += chld.getInternalID();&#xA;&#x9;str += &quot; &quot;;&#xA;}&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//OrRefinedResolutionCondition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//OrRefinedResolutionCondition/children"/>
+      <genOperations ecoreOperation="eca.ecore#//OrRefinedResolutionCondition/getAllParameters"
+          body="String str = &quot;&quot;;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;for(ResolutionCondition chld : this.children){&#xA;&#x9;&#x9;&#x9;str += chld.getInternalID();&#xA;&#x9;&#x9;&#x9;str += &quot; &quot;;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//SimpleApplicabilityCondition"/>
+    <genClasses ecoreClass="eca.ecore#//MaxExecutionsPerSectionApplicabilityCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//MaxExecutionsPerSectionApplicabilityCondition/maxExecutions"/>
+      <genOperations ecoreOperation="eca.ecore#//MaxExecutionsPerSectionApplicabilityCondition/getAllParameters"
+          body="return &quot;maxExecutions=\&quot;&quot; + this.maxExecutions + &quot;\&quot;&quot;;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//AndRefinedApplicabilityCondition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//AndRefinedApplicabilityCondition/children"/>
+      <genOperations ecoreOperation="eca.ecore#//AndRefinedApplicabilityCondition/getAllParameters"
+          body="String str = &quot;&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;for(ApplicabilityCondition chld : this.children){&#xA;&#x9;&#x9;&#x9;str += chld.getInternalID();&#xA;&#x9;&#x9;&#x9;str += &quot; &quot;;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//OrRefinedApplicabilityCondition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//OrRefinedApplicabilityCondition/children"/>
+      <genOperations ecoreOperation="eca.ecore#//OrRefinedApplicabilityCondition/getAllParameters"
+          body="String str = &quot;&quot;;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;for(ApplicabilityCondition chld : this.children){&#xA;&#x9;&#x9;&#x9;str += chld.getInternalID();&#xA;&#x9;&#x9;&#x9;str += &quot; &quot;;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//AbortStrategy"/>
+    <genClasses ecoreClass="eca.ecore#//DelegateStrategy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//DelegateStrategy/actor"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//RelaxDisableChildStrategy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//RelaxDisableChildStrategy/level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//RelaxDisableChildStrategy/requirement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//RelaxDisableChildStrategy/child"/>
+      <genOperations ecoreOperation="eca.ecore#//RelaxDisableChildStrategy/getAllParameters"
+          body="String str;&#xA;&#xA;str = &quot;level=\&quot;&quot; + this.getLevel().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; requirement=\&quot;&quot; + this.getRequirement().getInternalID() + &quot;\&quot;&quot;;&#xA;str += &quot; child=\&quot;&quot; + this.getChild().getInternalID() + &quot;\&quot;&quot;;&#xA;&#xA;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//RelaxReplaceChildStrategy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//RelaxReplaceChildStrategy/requirement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//RelaxReplaceChildStrategy/newRequirement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//RelaxReplaceChildStrategy/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//RelaxReplaceChildStrategy/copy"/>
+      <genOperations ecoreOperation="eca.ecore#//RelaxReplaceChildStrategy/getAllParameters"
+          body="String str;&#xA;&#xA;str = &quot;level=\&quot;&quot; + this.getLevel().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; requirement=\&quot;&quot; + this.getRequirement().getInternalID() + &quot;\&quot;&quot;;&#xA;str += &quot; copy=\&quot;&quot; + this.isCopy() + &quot;\&quot;&quot;;&#xA;&#xA;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//RetryStrategy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//RetryStrategy/copy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//RetryStrategy/time"/>
+      <genOperations ecoreOperation="eca.ecore#//RetryStrategy/getAllParameters" body="String str;&#xA;&#xA;str = &quot;copy=\&quot;&quot; + this.isCopy() + &quot;\&quot;&quot;;&#xA;str += &quot; time=\&quot;&quot; + this.getTime() + &quot;\&quot;&quot;; &#xA;&#xA;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//StrengthenEnableChildStrategy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//StrengthenEnableChildStrategy/requirement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//StrengthenEnableChildStrategy/child"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//StrengthenEnableChildStrategy/level"/>
+      <genOperations ecoreOperation="eca.ecore#//StrengthenEnableChildStrategy/getAllParameters"
+          body="String str;&#xA;&#xA;str = &quot;level=\&quot;&quot; + this.getLevel().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; requirement=\&quot;&quot; + this.getRequirement().getInternalID()+ &quot;\&quot;&quot;;&#xA;str += &quot; child=\&quot;&quot; + this.getChild().getInternalID() + &quot;\&quot;&quot;;&#xA;&#xA;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//StrengthenReplaceChildStrategy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//StrengthenReplaceChildStrategy/requirement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//StrengthenReplaceChildStrategy/newRequirement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//StrengthenReplaceChildStrategy/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//StrengthenReplaceChildStrategy/copy"/>
+      <genOperations ecoreOperation="eca.ecore#//StrengthenReplaceChildStrategy/getAllParameters"
+          body="String str;&#xA;&#xA;str = &quot;level=\&quot;&quot; + this.getLevel().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; requirement=\&quot;&quot; + this.getRequirement().getInternalID() + &quot;\&quot;&quot;;&#xA;str += &quot; newRequirement=\&quot;&quot; + this.getNewRequirement().getInternalID() + &quot;\&quot;&quot;;&#xA;str += &quot; copy=\&quot;&quot; + this.isCopy() + &quot;\&quot;&quot;;&#xA;&#xA;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//WarningStrategy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//WarningStrategy/actor"/>
+      <genOperations ecoreOperation="eca.ecore#//WarningStrategy/getAllParameters"
+          body="String str;&#xA;&#xA;str = &quot;actor=\&quot;&quot; + this.getActor().getInternalID() + &quot;\&quot;&quot;;&#xA;&#xA;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//ReconfigurationApplicabilityCondition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference eca.ecore#//ReconfigurationApplicabilityCondition/wrappedCondition"/>
+      <genOperations ecoreOperation="eca.ecore#//ReconfigurationApplicabilityCondition/getAllParameters"
+          body="String str;&#xD;&#xA;&#xD;&#xA;str = &quot;wrappedcondition=\&quot;\&quot;&quot;;;&#xD;&#xA;&#xD;&#xA;return str;"/>
+    </genClasses>
+    <genClasses ecoreClass="eca.ecore#//ReconfigurationResolutionCondition"/>
+    <genClasses ecoreClass="eca.ecore#//ReconfigurationStrategy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//ReconfigurationStrategy/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//ReconfigurationStrategy/algorithmId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eca.ecore#//ReconfigurationStrategy/procedureIds"/>
+      <genOperations ecoreOperation="eca.ecore#//ReconfigurationStrategy/getAllParameters"
+          body="String str;&#xA;&#xA;str = &quot;level=\&quot;&quot; + this.getLevel().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; algorithmId=\&quot;&quot; + this.getAlgorithmId().toString() + &quot;\&quot;&quot;;&#xA;str += &quot; procedureIds=\&quot;&quot; + this.getProcedureIds().toString() + &quot;\&quot;&quot;;&#xA;&#xA;return str;"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,14 +1,14 @@
 [comment encoding = UTF-8 /]
-[module generateMetaModel('http://www.nemo.inf.ufes.br/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
+[module generateMetaModel('http://www.nemo.inf.ufes.br/gore/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
 
 [template public generateMetaModel(aGoalModel : GoalModel)]
 
 [file (aGoalModel.modelName.replaceAll(' ', '').toLower().concat('.ecore'), false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="[aGoalModel.getModelShortName().toUpperFirst()/]" nsURI="https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/scheduler/scheduler.ecore"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="[aGoalModel.getModelShortName()/]" nsURI="https://nemo.inf.ufes.br/goremodel"
     nsPrefix="goremodel">
-	<eClassifiers xsi:type="ecore:EClass" name="[aGoalModel.getModelShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//GoalModel"/>
+	<eClassifiers xsi:type="ecore:EClass" name="[aGoalModel.getModelShortName()/]" eSuperTypes="http://www.nemo.inf.ufes.br/gore/zanshin#//GoalModel"/>
 	[for(ref : GOREElement | aGoalModel.refinements)]
 	[ref.generateID(aGoalModel)/]
 	[if(ref.oclIsKindOf(AwReq))]
@@ -22,29 +22,29 @@
 		[ref.oclAsType(AwReq).resolution.generateID(aGoalModel)/]
 		[/if]
 	[/if]
-	<eClassifiers xsi:type="ecore:EClass" name="[ref.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//[ref.getType()/]"/>
+	<eClassifiers xsi:type="ecore:EClass" name="[ref.getShortName()/]" eSuperTypes="http://www.nemo.inf.ufes.br/gore/zanshin#//[ref.getType()/]"/>
 	[/for]
 	[for(da : DomainAssumption | aGoalModel.domainassumption)]
 	[da.generateID(aGoalModel)/]
-	<eClassifiers xsi:type="ecore:EClass" name="[da.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//[da.getType()/]"/>
+	<eClassifiers xsi:type="ecore:EClass" name="[da.getShortName()/]" eSuperTypes="http://www.nemo.inf.ufes.br/gore/zanshin#//[da.getType()/]"/>
 	[/for]
 	[if(aGoalModel.configuration <> null)]
 	[for(conf : Configuration | aGoalModel.configuration)]
-	<eClassifiers xsi:type="ecore:EClass" name="[conf.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//Parameter"/>	
-[comment]	[for(param : Parameter | conf.parameters)][/comment]
-[comment]	[param.generateID(aGoalModel)/][/comment]
-[comment]	[param.getAllParameters()/][/comment]
-[comment]	<eClassifiers xsi:type="ecore:EClass" name="[conf.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//Parameter"/>[/comment]
-[comment]	[/for][/comment]
+[comment]	<eClassifiers xsi:type="ecore:EClass" name="[param.name/]" eSuperTypes="http://www.nemo.inf.ufes.br/gore/zanshin#//Parameter"/>	[/comment]
+	[for(param : Parameter | conf.parameters)]
+	[param.generateID(aGoalModel)/]
+	[param.getAllParameters()/]
+	<eClassifiers xsi:type="ecore:EClass" name="[param.name/]" eSuperTypes="http://www.nemo.inf.ufes.br/gore/zanshin#//Parameter"/>
+	[/for]
 	[/for]
 	[/if]
 	[for(relation : DifferentialRelation | aGoalModel.relations)]
 	[relation.generateID(aGoalModel)/]
-	<eClassifiers xsi:type="ecore:EClass" name="[relation.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//[relation.getType()/]"/>
+	<eClassifiers xsi:type="ecore:EClass" name="[relation.getShortName()/]" eSuperTypes="http://www.nemo.inf.ufes.br/gore/zanshin#//[relation.getType()/]"/>
 	[/for]
 	[for(actors : Actor | aGoalModel.actors)]
 	[actors.generateID(aGoalModel)/]
-	<eClassifiers xsi:type="ecore:EClass" name="[actors.getShortName()/]" eSuperTypes="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/gore.ecore#//[actors.getType()/]"/>
+	<eClassifiers xsi:type="ecore:EClass" name="[actors.getShortName()/]" eSuperTypes="http://www.nemo.inf.ufes.br/gore/zanshin#//[actors.getType()/]"/>
 	[/for]
 </ecore:EPackage>
 [/file]

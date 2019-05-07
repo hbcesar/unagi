@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module refinements('http://www.nemo.inf.ufes.br/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
+[module refinements('http://www.nemo.inf.ufes.br/gore/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
 
 [template public refinements(aGoalModel : GoalModel, aGOREElement : GoalOrientedRequirement)]
 	[if( aGOREElement.refinements->size() > 0 or aGOREElement.awreqs->size() > 0 or aGOREElement.assumptions->size() > 0)]
@@ -8,17 +8,17 @@
 			[if(awreqs.strategies->size() > 0 or awreqs.resolution->size() > 0)]
 			<awreqs xsi:type="goremodel:[awreqs.getShortName()/]" [awreqs.getAllParameters()/]>
 				[for(resolution : ResolutionCondition | awreqs.resolution)]
-				<condition xsi:type="it.unitn.disi.zanshin.model:[resolution.name/]" [resolution.getAllParameters()/]/>
+				<resolution xsi:type="ecamodel:[resolution.name/]" [resolution.getAllParameters()/]/>
 				[/for]
 				[for(strategies : AdaptationStrategy | awreqs.strategies)]
 				[if(strategies.applicabilities->size() > 0)]
-				<strategies xsi:type="it.unitn.disi.zanshin.model:[strategies.name/]" [strategies.getAllParameters()/]>
+				<strategies xsi:type="ecamodel:[strategies.name/]" [strategies.getAllParameters()/]>
 					[for(applicabilities : ApplicabilityCondition | strategies.applicabilities)]
-					<condition xsi:type="it.unitn.disi.zanshin.model:[applicabilities.name/]" [applicabilities.getAllParameters()/]/>
+					<applicabilities xsi:type="ecamodel:[applicabilities.name/]" [applicabilities.getAllParameters()/]/>
 					[/for]
 				</strategies>
 				[else]
-					<strategies xsi:type="it.unitn.disi.zanshin.model:[strategies.name/]" [strategies.getAllParameters()/]/>
+					<strategies xsi:type="ecamodel:[strategies.name/]" [strategies.getAllParameters()/]/>
 				[/if]
 				[/for]
 			</awreqs>

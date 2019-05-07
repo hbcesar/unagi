@@ -1,11 +1,11 @@
 [comment encoding = UTF-8 /]
-[module generateModel('http://www.nemo.inf.ufes.br/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
+[module generateModel('http://www.nemo.inf.ufes.br/gore/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
 [import gore::unagi::converter::refinements /]
 
 [template public generateModel(aGoalModel : GoalModel)]
 [file ('model.'.concat(aGoalModel.modelName.replaceAll(' ', '')).toLower(), false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
-<goremodel:[aGoalModel.getModelShortName()/] xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:goremodel="{Please change}" xmlns:ecamodel="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/eca.ecore">
+<goremodel:[aGoalModel.getModelShortName()/] xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:goremodel="platform:/resource/teste.gore/zanshin-gen/meetingscheduler.ecore" xmlns:ecamodel="http://www.nemo.inf.ufes.br/gore/eca">
 [if(aGoalModel.rootGoal->size() > 0)]
 	<rootGoal xsi:type="goremodel:[aGoalModel.rootGoal.getShortName()/]" [aGoalModel.rootGoal.getAllParameters()/]>
 	[for(ref : GoalOrientedRequirement | aGoalModel.rootGoal.refinements)]
@@ -53,7 +53,7 @@
 	ERROR: Rootgoal is not defined.
 [/if]
 
-</goremodel:[aGoalModel.getModelShortName().toUpperFirst()/]GoalModel>
+</goremodel:[aGoalModel.getModelShortName()/]>
 
 [/file]
 [/template]
