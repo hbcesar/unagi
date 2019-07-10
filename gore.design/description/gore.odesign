@@ -2,9 +2,9 @@
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="gore" version="12.0.0.2017041100">
   <ownedViewpoints name="Gore Diagram" modelFileExtension="gore">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Gore" initialisation="true" domainClass="gore.GoalModel" enablePopupBars="true">
-      <metamodel href="http://www.nemo.inf.ufes.br/gore#/"/>
+      <metamodel href="http://www.nemo.inf.ufes.br/gore/gore#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="HardGoal" domainClass="gore.Hardgoal">
+        <nodeMappings name="HardGoal" domainClass="gore.HardGoal">
           <style xsi:type="style:EllipseNodeDescription" showIcon="false" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="8" verticalDiameterComputationExpression="4">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -55,6 +55,12 @@
           </style>
         </nodeMappings>
         <edgeMappings name="Hardgoal Edge" sourceMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Task'] //@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='SoftGoal']" targetMapping="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='HardGoal']" targetFinderExpression="feature:parent">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
           <conditionnalStyles predicateExpression="[thisEObject.parent.refinementType.toString().equalsIgnoreCase('and')/]">
             <style>
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -110,7 +116,7 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.Hardgoal" referenceName="refinements"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gore.HardGoal" referenceName="refinements"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -180,7 +186,9 @@
           <ownedTools xsi:type="tool:DoubleClickDescription" name="new AwReq Diagram" mappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='AwReq']">
             <element name="element"/>
             <elementView name="elementView"/>
-            <initialOperation/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='AwReq%20Diagram']"/>
+            </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:DoubleClickDescription" name="new Configuration Diagram" mappings="//@ownedViewpoints[name='Gore%20Diagram']/@ownedRepresentations[name='Gore']/@defaultLayer/@nodeMappings[name='Configuration']">
             <element name="element"/>
@@ -251,9 +259,17 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="AwReq Diagram" domainClass="gore.AwReq">
       <metamodel href="http://www.nemo.inf.ufes.br/gore/eca#/"/>
-      <metamodel href="http://www.nemo.inf.ufes.br/gore#/"/>
+      <metamodel href="http://www.nemo.inf.ufes.br/gore/gore#/"/>
       <defaultLayer name="Default">
         <containerMappings name="AwReq Container" semanticCandidatesExpression="var:self" domainClass="gore.AwReq" childrenPresentation="VerticalStack">
+          <subContainerMappings name="ResolutionCondition Container" semanticCandidatesExpression="feature:eAllContents" domainClass="eca.ResolutionCondition" childrenPresentation="VerticalStack">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" widthComputationExpression="20" backgroundStyle="Liquid">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </subContainerMappings>
           <subContainerMappings name="Strategy Container" semanticCandidatesExpression="feature:eAllContents" domainClass="eca.AdaptationStrategy" childrenPresentation="VerticalStack">
             <subContainerMappings name="ApplicabilityCondition Container" semanticCandidatesExpression="feature:eAllContents" domainClass="eca.ApplicabilityCondition" childrenPresentation="VerticalStack">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" widthComputationExpression="20" backgroundStyle="Liquid">
@@ -268,14 +284,6 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-            </style>
-          </subContainerMappings>
-          <subContainerMappings name="ResolutionCondition Container" semanticCandidatesExpression="feature:eAllContents" domainClass="eca.ResolutionCondition" childrenPresentation="VerticalStack">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" widthComputationExpression="20" backgroundStyle="Liquid">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
             </style>
           </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" widthComputationExpression="20" backgroundStyle="Liquid">
@@ -482,7 +490,7 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Configuration Diagram" domainClass="gore.Configuration">
-      <metamodel href="http://www.nemo.inf.ufes.br/gore#/"/>
+      <metamodel href="http://www.nemo.inf.ufes.br/gore/gore#/"/>
       <defaultLayer name="Default">
         <containerMappings name="Configuration Container" semanticCandidatesExpression="var:self" domainClass="gore.Configuration" childrenPresentation="VerticalStack">
           <subContainerMappings name="Parameter Container" semanticCandidatesExpression="feature:eAllContents" domainClass="gore.Parameter">
