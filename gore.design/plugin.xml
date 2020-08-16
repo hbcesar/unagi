@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
 <?eclipse version="3.0"?>
 <plugin>
   <extension point="org.eclipse.sirius.componentization">
@@ -7,4 +8,85 @@
 	       name="gore">
     </component>
   </extension>
-</plugin>
+  <extension
+         point="org.eclipse.ui.commands">
+      
+      <command
+            categoryId="unagi.category.action"
+            id="unagi.commands.server"
+            name="Zanshin Server">
+      </command>
+      <command
+            categoryId="unagi.category.action"
+            id="unagi.commands.simulation"
+            name="Simulation Console">
+      </command>
+      <command
+            categoryId="unagi.category.action"
+            id="unagi.commands.terminateServer"
+            name="Terminate Server">
+      </command>
+      <command
+            categoryId="unagi.category.action"
+            id="unagi.commands.uploadFile"
+            name="Upload File Unagi to Zanshin">
+      </command>
+         
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="unagi.Server"
+            commandId="unagi.commands.server"
+            >
+      </handler>
+      <handler
+            class="unagi.Simulation"
+            commandId="unagi.commands.simulation">
+      </handler>
+      <handler
+            class="unagi.Terminate"
+            commandId="unagi.commands.terminateServer">
+      </handler>
+      <handler
+            class="unagi.Upload"
+            commandId="unagi.commands.uploadFile">
+      </handler>
+   </extension>
+   
+<extension point="org.eclipse.ui.menus">
+    <menuContribution
+          allPopups="false"
+          locationURI="toolbar:org.eclipse.sirius.diagram.ui.tabbar?after=additions">
+        <command
+              commandId="unagi.commands.server"
+              icon="icons/runLaunch.png"
+              id="org.eclipse.sirius.diagram.tabbar.test.action.on.diagramelement"
+              label="Run the Zanshin Server"
+              tooltip="Run the Zanshin Server">
+		</command>
+        <command
+              commandId="unagi.commands.simulation"
+              icon="icons/launchSimulate.png"
+              id="org.eclipse.sirius.diagram.tabbar.test.action.on.diagramelement"
+              label="Run the Simulation Console - Zanshin"
+              tooltip="Run the Simulation Console - Zanshin">
+        </command>
+        <command
+              commandId="unagi.commands.terminateServer"
+              icon="icons/terminatedlaunch.png"
+              id="org.eclipse.sirius.diagram.tabbar.test.action.on.diagramelement"
+              label="Terminate Zanshin Server"
+              tooltip="Terminate Zanshin Server">
+        </command>
+        <command
+              commandId="unagi.commands.uploadFile"
+              icon="icons/load.png"
+              id="org.eclipse.sirius.diagram.tabbar.test.action.on.diagramelement"
+              label="Upload File - Unagi to Zanshin"
+              tooltip="Upload File - Unagi to Zanshin">
+        </command>
+   </menuContribution>
+ </extension>
+ </plugin>
