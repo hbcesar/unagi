@@ -22,7 +22,6 @@ public class Server extends AbstractHandler {
 		 * wc.setAttribute("configLocation", "${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Zanshin");
 		 */
 		try {
-
 			ILaunchManager manager = DebugPlugin.getDefault().getLaunchManager();
 			ILaunchConfigurationType type = manager.getLaunchConfigurationType("org.eclipse.pde.ui.EquinoxLauncher");
 			ILaunchConfigurationWorkingCopy wc = type.newInstance(null, "Zanshin");
@@ -32,7 +31,7 @@ public class Server extends AbstractHandler {
 			wc.setAttribute("bootstrap", "");
 			wc.setAttribute("checked", "[NONE]");
 			wc.setAttribute("clearConfig", false);
-			wc.setAttribute("configLocation", "C:/Users/Asus/runtime-EclipseApplication-Neon/.metadata/.plugins/org.eclipse.pde.core/Zanshin");
+			wc.setAttribute("configLocation", "${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Zanshin");
 			wc.setAttribute("default", true);
 			wc.setAttribute("default_auto_start", true);
 			wc.setAttribute("default_start_level", 4);

@@ -12,22 +12,18 @@
          point="org.eclipse.ui.commands">
       
       <command
-            categoryId="unagi.category.action"
             id="unagi.commands.server"
             name="Zanshin Server">
       </command>
       <command
-            categoryId="unagi.category.action"
             id="unagi.commands.simulation"
             name="Simulation Console">
       </command>
       <command
-            categoryId="unagi.category.action"
             id="unagi.commands.terminateServer"
             name="Terminate Server">
       </command>
       <command
-            categoryId="unagi.category.action"
             id="unagi.commands.uploadFile"
             name="Upload File Unagi to Zanshin">
       </command>
