@@ -16,3 +16,11 @@ Export-Package: eca,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Import-Package: it.unitn.disi.zanshin.model.eca,
+ it.unitn.disi.zanshin.model.eca.impl,
+ it.unitn.disi.zanshin.model.eca.util,
+ it.unitn.disi.zanshin.model.gore,
+ it.unitn.disi.zanshin.model.gore.impl,
+ it.unitn.disi.zanshin.model.gore.util,
+ it.unitn.disi.zanshin.services,
+ it.unitn.disi.zanshin.util
