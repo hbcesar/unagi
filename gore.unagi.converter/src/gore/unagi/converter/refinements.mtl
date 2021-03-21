@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module refinements('http://www.nemo.inf.ufes.br/gore/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
+[module refinements('http://www.nemo.inf.ufes.br/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
 
 [template public refinements(aGoalModel : GoalModel, aGOREElement : GoalOrientedRequirement)]
 	[if( aGOREElement.refinements->size() > 0 or aGOREElement.awreqs->size() > 0 or aGOREElement.assumptions->size() > 0)]

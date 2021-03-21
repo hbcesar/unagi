@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module generateMetaModel('http://www.nemo.inf.ufes.br/gore/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
+[module generateMetaModel('http://www.nemo.inf.ufes.br/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
 
 [template public generateMetaModel(aGoalModel : GoalModel)]
 

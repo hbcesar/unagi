@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module generateModel('http://www.nemo.inf.ufes.br/gore/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
+[module generateModel('http://www.nemo.inf.ufes.br/gore', 'http://www.nemo.inf.ufes.br/gore/eca')]
 [import gore::unagi::converter::refinements /]
 
 [template public generateModel(aGoalModel : GoalModel)]
